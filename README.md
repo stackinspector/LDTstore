@@ -11,7 +11,7 @@ Log in to the remote server as root and ensure the current directory is `/root/`
 nginx -s quit
 tail -n 20 ./nginx/logs/error
 # pack the current nginx directory in preparation of recycle
-tar caf ./nginx.tar.gz ./nginx
+tar caf ./nginx.tar.xz ./nginx
 # EXECUTE LOCALLY: recycle (download) the remote `/root/nginx.tar.xz` (contains error and access log) with `scp`
 # remove the current nginx directory
 rm -r ./nginx
@@ -22,7 +22,7 @@ tar xzvf ./nginx-new.tar.gz ldtstore-static-main/nginx/
 mv ./ldtstore-static-main/nginx ./nginx
 mkdir ./nginx/logs
 # remove the used files
-rm ./nginx.tar.gz ./nginx-new.tar.gz ./ldtstore-static-main
+rm ./nginx.tar.xz ./nginx-new.tar.gz ./ldtstore-static-main
 # start the service and verify that the service was started successfully
 nginx -p ./nginx -c ./nginx/nginx.conf
 cat ./nginx/logs/error
