@@ -2,7 +2,7 @@
 <html lang="zh-cmn-Hans">
 
 <head>
-    <!-- Home Page for ldtstore.com.cn Rev 0.2.0 -->
+    <!-- Home Page for ldtstore.com.cn Rev 0.2.1 -->
     <!-- Copyright 2021 stackinspector. MIT Lincese. -->
     <!-- Source Code: https://github.com/stackinspector/ldtstore-static -->
     <meta charset="UTF-8">
@@ -10,7 +10,7 @@
     <meta name="renderer" content="webkit">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="本网站为B站UP主老弟一号的个人网站，用于提供文件下载与一些跳转服务">
-    <meta name="keywords" content="老弟一号,LDTstore">
+    <meta name="keywords" content="老弟一号,LaodiTeachTips,LDTstore">
     <link rel="icon" href="/laodi.png">
     <title>老弟一号&amp;LDTstore</title>
     <style>
@@ -76,9 +76,17 @@
             background-color: #fff;
         }
 
+        a.button-nolink {
+            cursor: default;
+        }
+
         a.button:hover {
             color: #fff;
             background-color: #00b5e5;
+        }
+
+        a.button-detail:hover {
+            background-color: #00a1d6;
         }
 
         /* links */
@@ -103,6 +111,10 @@
             text-align: justify;
             font-size: 1.1em;
         }
+
+        span.text-detail-footer {
+            font-size: 1em;
+        }
     </style>
 </head>
 
@@ -110,10 +122,10 @@
     <h1>
         <img class="logo" src="/laodi.png" />&nbsp;老弟一号&amp;LDTstore
     </h1>
-    <hr />
 
     <div class="button-container">
         <p><a class="button" href="/r/home">老弟一号个人空间</a></p>
+        <p><a class="button" href="/r/home-ops">运营官方账号</a></p>
         <p><a class="button" href="/r/store">LDTstore淘宝店铺</a></p>
         <p><a class="button" onclick="change('yjws-detail')">B站话题 #阅机无数#</a></p>
         <div class="detail-container" id="yjws-detail">
@@ -127,10 +139,31 @@
             <p><a class="button button-detail" href="/r/icu-spec-1">初版投稿规范</a></p>
             <p><a class="button button-detail" href="/r/icu-spec-11">补充</a></p>
         </div>
+        <p><a class="button" onclick="change('live-detail')">直播间</a></p>
+        <div class="detail-container" id="live-detail">
+            <p><a class="button button-detail" href="/r/live-room">进入直播间</a></p>
+            <p><a class="button button-detail" href="/r/live-faq-1">直播间常见问题FAQ</a></p>
+            <p><a class="button button-detail" href="/r/live-rec-yjws">阅机无数录播</a></p>
+            <p><a class="button button-detail" href="/r/live-rec-other">其他重要录播</a></p>
+        </div>
         <p><a class="button" onclick="change('group-detail')">硬件讨论群</a></p>
         <div class="detail-container" id="group-detail">
-            <p><a class="button button-detail">一群 1005059704</a></p>
+            <p><a class="button button-detail button-nolink">一群 1005059704</a></p>
             <p><a class="button button-detail" href="/r/group-readme-1">核心群入群测试</a></p>
+        </div>
+        <p><a class="button" onclick="change('outer-detail')">站外官方账号</a></p>
+        <div class="detail-container" id="outer-detail">
+            <p><a class="button button-detail" href="/r/outer-zh">知乎 老弟一号<!-- (用户名: LaodiTeachTips) --></a></p>
+            <p><a class="button button-detail" href="/r/outer-ac">Acfun LaodiTeachTips</a></p>
+            <p><a class="button button-detail button-nolink">YouTube 即将就绪</a></p>
+            <p><a class="button button-detail" href="/r/outer-wb">微博 LaodiTeachTips</a></p>
+            <p><a class="button button-detail button-nolink">抖音 LaodiTeachtips</a></p>
+            <p><a class="button button-detail" href="/r/outer-tt">今日头条 LaodiTeachTips</a></p>
+            <p><a class="button button-detail" href="/r/outer-xg">西瓜视频 LaodiTeachTips</a></p>
+            <p><a class="button button-detail" href="/r/outer-bh">好看视频 LaodiTeachTips</a></p>
+            <span class="text-detail-footer">
+                关于站外账号的运营详情<br>请参阅<b>运营官方账号置顶动态</b>
+            </span>
         </div>
         <p><a class="button" onclick="change('business-detail')">商务合作</a></p>
         <div class="detail-container" id="business-detail">
@@ -156,7 +189,7 @@
         /**
          * change the visibility of an element with the specified id
          * @param {string} id target element id
-         * @param {boolean} state `true` for `inline-block` and `false` for `none`
+         * @param {boolean} state `true` for `block` and `false` for `none`
          * @returns {void}
          */
         function change(id) {
