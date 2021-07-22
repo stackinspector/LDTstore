@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <!-- Home Page for ldtstore.com.cn Rev 0.3.0 -->
+    <!-- Copyright 2021 stackinspector. MIT Lincese. -->
+    <!-- Source Code: https://github.com/stackinspector/ldtstore-static -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="本网站为B站UP主老弟一号的个人网站，用于提供文件下载与一些跳转服务">
+    <meta name="keywords" content="老弟一号,LaodiTeachTips,LDTstore">
+    <link rel="icon" href="https://ldtstore-static.oss-cn-hangzhou.aliyuncs.com/image/shared/laodi.png">
+    <title>老弟一号&amp;LDTstore</title>
+    <style>
+/** base **/
+/* base */
+
+body {
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei, Source Han Sans SC, Noto Sans CJK SC, WenQuanYi Micro Hei, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* head */
+
+img.logo {
+  vertical-align: text-top;
+}
+
+/* links */
+
+a.link {
+  color: #00a1d6;
+}
+
+a.footer-link {
+  color: #999;
+}
+
+a.link:hover {
+  color: #00b5e5;
+}
+
+/* containers */
+
+div#footer-container {
+  bottom: 0;
+}
+
+/** buttons **/
+/* containers */
+
+div.button-container {
+  margin: 0 auto;
+  max-width: 300px;
+}
+
+div.button-container p {
+  margin-block-start: 0.8em;
+  margin-block-end: 0.8em;
+}
+
+div.detail-container {
+  display: none;
+}
+
+div.detail-container p {
+  margin-block-start: 0.6em;
+  margin-block-end: 0.6em;
+}
+
+/* buttons */
+
+a.button {
+  cursor: pointer;
+  display: inline-block;
+  width: 100%;
+  border-radius: 5px;
+  line-height: 2.4;
+  font-size: 1.2em;
+  color: #fff;
+  background-color: #00a1d6;
+}
+
+a.button-detail {
+  font-size: 1.1em;
+  border: 1px solid #00a1d6;
+  color: #00a1d6;
+  background-color: #fff;
+}
+
+a.button-nolink {
+  cursor: default;
+}
+
+a.button:hover {
+  color: #fff;
+  background-color: #00b5e5;
+}
+
+a.button-detail:hover {
+  background-color: #00a1d6;
+}
+
+/* texts */
+
+span.text {
+  display: inline-block;
+  width: 100%;
+  text-align: justify;
+  font-size: 1.1em;
+}
+
+span.text-detail-footer {
+  font-size: 1em;
+}
+
+    </style>
+</head>
+
+<body>
+    <h1>
+        <img class="logo" src="https://ldtstore-static.oss-cn-hangzhou.aliyuncs.com/image/shared/laodi.png" />&nbsp;老弟一号&nbsp;&amp;&nbsp;LDTstore
+    </h1>
+
+    <div class="button-container"><p><a class="button" href="/r/home">老弟一号个人空间</a></p><p><a class="button" href="/r/home-ops">运营官方账号</a></p><p><a class="button" href="/r/store">LDTstore淘宝店铺</a></p><p><a class="button" onclick="change('yjws-detail')">阅机无数话题</a></p><div class="detail-container" id="yjws-detail"><p><a class="button button-detail" href="/r/yjws">进入B站话题</a></p><p><a class="button button-detail" href="/r/yjws-guide-21">投稿快速指南 Rev 2.1</a></p><p><a class="button button-detail" href="/r/yjws-spec-21">话题管理与投稿规范 Rev 2.1</a></p></div><p><a class="button" onclick="change('icu-detail')">装机ICU话题</a></p><div class="detail-container" id="icu-detail"><p><a class="button button-detail" href="/r/icu">进入B站话题</a></p><p><a class="button button-detail" href="/r/icu-spec-1">初版投稿规范</a></p><p><a class="button button-detail" href="/r/icu-spec-11">补充</a></p></div><p><a class="button" onclick="change('live-detail')">直播间</a></p><div class="detail-container" id="live-detail"><p><a class="button button-detail" href="/r/live-room">进入直播间</a></p><p><a class="button button-detail" href="/r/live-faq-1">直播间常见问题FAQ</a></p><p><a class="button button-detail" href="/r/live-rec-yjws">阅机无数录播</a></p><p><a class="button button-detail" href="/r/live-rec-other">其他重要录播</a></p></div><p><a class="button" onclick="change('group-detail')">硬件讨论群</a></p><div class="detail-container" id="group-detail"><p><a class="button button-detail button-nolink">一群 1005059704</a></p><p><a class="button button-detail" href="/r/group-readme-1">核心群入群测试</a></p></div><p><a class="button" onclick="change('outer-detail')">站外官方账号</a></p><div class="detail-container" id="outer-detail"><p><a class="button button-detail" href="/r/outer-zh">知乎 老弟一号</a></p><p><a class="button button-detail" href="/r/outer-ac">AcFun LaodiTeachTips</a></p><p><a class="button button-detail" href="/r/outer-yt">YouTube LaodiTeachTips</a></p><p><a class="button button-detail" href="/r/outer-wb">微博 LaodiTeachTips</a></p><p><a class="button button-detail button-nolink">抖音 LaodiTeachtips</a></p><p><a class="button button-detail" href="/r/outer-mz">喵喵折 LaodiTeachTips</a></p><p><a class="button button-detail" href="/r/outer-tt">今日头条 LaodiTeachTips</a></p><p><a class="button button-detail" href="/r/outer-xg">西瓜视频 LaodiTeachTips</a></p><p><a class="button button-detail" href="/r/outer-bh">好看视频 LaodiTeachTips</a></p><span class="text-detail-footer">关于站外账号的运营详情<br>请参阅<b>运营官方账号置顶动态</b></span></div><p><a class="button" onclick="change('business-detail')">商务合作</a></p><div class="detail-container" id="business-detail"><span class="text">商务合作请加微信<b>13869651328</b>，并注明<b>合作方与合作内容</b>。目前只接受数码领域相关合作，产品评测优先；<b>不接受干涉测评、跨领域合作以及其他平台入驻</b>。感谢您的认可。</span></div></div>
+
+    <div id="footer-container">
+        <p>
+            <!-- <a class="link footer-link" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=" target="_blank">
+                <img src="https://ldtstore-static.oss-cn-hangzhou.aliyuncs.com/image/shared/police.png" />
+                <span>公安备案号占位符</span>
+            </a> -->
+            <a class="link footer-link" href="http://beian.miit.gov.cn/" target="_blank">
+                <span>鲁ICP备2021014114号</span>
+            </a>
+        </p>
+    </div>
+
+    <script>
+        /**
+         * change the visibility of an element with the specified id
+         * @param {string} id target element id
+         * @param {boolean} state `true` for `block` and `false` for `none`
+         * @returns {void}
+         */
+        function change(id) {
+            var el = document.getElementById(id)
+            el.style.display = (el.style.display !== "block") ? "block" : "none"
+        }
+    </script>
+</body>
+
+</html>
