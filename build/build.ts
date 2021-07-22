@@ -1,4 +1,4 @@
-import { parse } from "https://deno.land/std@0.102.0/encoding/yaml.ts"
+import { parse as parseYaml } from "https://deno.land/std@0.102.0/encoding/yaml.ts"
 
 type Button = {
     type: "button"
@@ -46,10 +46,28 @@ const matcher = (top: boolean) => (input: Button | Text | List): string => {
 
 const handleContainer = (input: Container): string => `<div class="button-container">${input.content.map(matcher(true)).join("")}</div>`
 
-export const build = (foo: string, bar: string, container: Container): string => foo + handleContainer(container) + bar
+/* TODO enhance performance by using string[] as string builders */
+const insert = (template: string, content: Record<string, string>) => {
+    let current = template
+    for (const [key, val] of Object.entries(content)) {
+        const splited = current.split(key)
+        if (splited.length !== 2) throw new Error(`split error when key=${key}`)
+        const [foo, bar] = splited
+        current = foo + val + bar
+    }
+    return current
+}
 
-const splited = Deno.readTextFileSync("./index.prebuild.html").split("{{buttons}}")
-if (splited.length !== 2) throw new Error("parse prebuild HTML error")
-const [foo, bar] = splited
-const parsed = parse(Deno.readTextFileSync("./buttons.yml")) as Container
-Deno.writeTextFileSync("C:/swap/stuff/testhtml/index.html", build(foo, bar, parsed))
+Deno.writeTextFileSync(
+    "C:/swap/stuff/testhtml/index.html",
+    insert(
+        Deno.readTextFileSync("./index.prebuild.html"),
+        {
+            "<!--{{buttons}}-->": handleContainer(
+                parseYaml(Deno.readTextFileSync("./buttons.yml")) as Container
+            ),
+            "/*{{base.css}}*/": Deno.readTextFileSync("./base.css"),
+            "/*{{buttons.css}}*/": Deno.readTextFileSync("./buttons.css"),
+        }
+    )
+)
