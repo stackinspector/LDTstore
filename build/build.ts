@@ -59,7 +59,7 @@ const insert = (template: string, content: Record<string, string>) => {
 }
 
 Deno.writeTextFileSync(
-    "C:/swap/stuff/testhtml/index.html",
+    "../nginx/wwwroot/index.html",
     insert(
         Deno.readTextFileSync("./index.prebuild.html"),
         {
