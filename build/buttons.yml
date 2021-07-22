@@ -1,0 +1,104 @@
+type: container
+content:
+  - type: button
+    target: home
+    text: "老弟一号个人空间"
+  - type: button
+    target: home-ops
+    text: "运营官方账号"
+  - type: button
+    target: store
+    text: "LDTstore淘宝店铺"
+  - type: list
+    id: yjws
+    text: "阅机无数话题"
+    content:
+      - type: button
+        target: yjws
+        text: "进入B站话题"
+      - type: button
+        target: yjws-guide-21
+        text: "投稿快速指南 Rev 2.1"
+      - type: button
+        target: yjws-spec-21
+        text: "话题管理与投稿规范 Rev 2.1"
+  - type: list
+    id: icu
+    text: "装机ICU话题"
+    content:
+      - type: button
+        target: icu
+        text: "进入B站话题"
+      - type: button
+        target: icu-spec-1
+        text: "初版投稿规范"
+      - type: button
+        target: icu-spec-11
+        text: "补充"
+  - type: list
+    id: live
+    text: "直播间"
+    content:
+      - type: button
+        target: live-room
+        text: "进入直播间"
+      - type: button
+        target: live-faq-1
+        text: "直播间常见问题FAQ"
+      - type: button
+        target: live-rec-yjws
+        text: "阅机无数录播"
+      - type: button
+        target: live-rec-other
+        text: "其他重要录播"
+  - type: list
+    id: group
+    text: "硬件讨论群"
+    content:
+      - type: button
+        target: null
+        text: "一群 1005059704"
+      - type: button
+        target: group-readme-1
+        text: "核心群入群测试"
+  - type: list
+    id: outer
+    text: "站外官方账号"
+    content:
+      - type: button
+        target: outer-zh
+        text: "知乎 老弟一号" # (用户名: LaodiTeachTips)
+      - type: button
+        target: outer-ac
+        text: "AcFun LaodiTeachTips"
+      - type: button
+        target: outer-yt
+        text: "YouTube LaodiTeachTips"
+      - type: button
+        target: outer-wb
+        text: "微博 LaodiTeachTips"
+      - type: button
+        target: null
+        text: "抖音 LaodiTeachtips"
+      - type: button
+        target: outer-mz
+        text: "喵喵折 LaodiTeachTips"
+      - type: button
+        target: outer-tt
+        text: "今日头条 LaodiTeachTips"
+      - type: button
+        target: outer-xg
+        text: "西瓜视频 LaodiTeachTips"
+      - type: button
+        target: outer-bh
+        text: "好看视频 LaodiTeachTips"
+      - type: text
+        footer: true
+        text: "关于站外账号的运营详情<br>请参阅<b>运营官方账号置顶动态</b>"
+  - type: list
+    id: business
+    text: "商务合作"
+    content:
+      - type: text
+        footer: false
+        text: "商务合作请加微信<b>13869651328</b>，并注明<b>合作方与合作内容</b>。目前只接受数码领域相关合作，产品评测优先；<b>不接受干涉测评、跨领域合作以及其他平台入驻</b>。感谢您的认可。"
