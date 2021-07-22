@@ -1,0 +1,101 @@
+/* base */
+
+body {
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei, Source Han Sans SC, Noto Sans CJK SC, WenQuanYi Micro Hei, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* head */
+
+img.logo {
+  vertical-align: text-top;
+}
+
+/* containers */
+
+div.button-container {
+  margin: 0 auto;
+  max-width: 300px;
+}
+
+div.button-container p {
+  margin-block-start: 0.8em;
+  margin-block-end: 0.8em;
+}
+
+div.detail-container {
+  display: none;
+}
+
+div.detail-container p {
+  margin-block-start: 0.6em;
+  margin-block-end: 0.6em;
+}
+
+div#footer-container {
+  bottom: 0;
+}
+
+/* buttons */
+
+a.button {
+  cursor: pointer;
+  display: inline-block;
+  width: 100%;
+  border-radius: 5px;
+  line-height: 2.4;
+  font-size: 1.2em;
+  color: #fff;
+  background-color: #00a1d6;
+}
+
+a.button-detail {
+  font-size: 1.1em;
+  border: 1px solid #00a1d6;
+  color: #00a1d6;
+  background-color: #fff;
+}
+
+a.button-nolink {
+  cursor: default;
+}
+
+a.button:hover {
+  color: #fff;
+  background-color: #00b5e5;
+}
+
+a.button-detail:hover {
+  background-color: #00a1d6;
+}
+
+/* links */
+
+a.link {
+  color: #00a1d6;
+}
+
+a.footer-link {
+  color: #999;
+}
+
+a.link:hover {
+  color: #00b5e5;
+}
+
+/* texts */
+
+span.text {
+  display: inline-block;
+  width: 100%;
+  text-align: justify;
+  font-size: 1.1em;
+}
+
+span.text-detail-footer {
+  font-size: 1em;
+}
