@@ -1,53 +1,12 @@
 import { parse as parseYaml } from "https://deno.land/std@0.102.0/encoding/yaml.ts"
+import { encodeText, decodeText } from "https://cdn.jsdelivr.net/gh/Berylsoft/DenoBase/textcodec.ts"
 
-type Button = {
-    type: "button"
-    target: string
-    text: string | null
-}
+import { getButtons, ButtonContainer } from "./dynamic/buttons.ts"
 
-type Text = {
-    type: "text"
-    footer: boolean
-    text: string
-}
-
-type List = {
-    type: "list"
-    id: string
-    text: string
-    content: (Button | Text)[]
-}
-
-type Container = {
-    type: "container"
-    content: (Button | Text | List)[]
-}
-
-const handleButton = (input: Button, top: boolean): string => input.target === null ?
-    `<p><a class="button button-detail button-nolink">${input.text}</a></p>` :
-    `<p><a class="button${top ? '' : ' button-detail'}" href="/r/${input.target}">${input.text}</a></p>`
-
-const handleText = (input: Text): string => `<span class="${input.footer ? 'text-detail-footer' : 'text'}">${input.text}</span>`
-
-const handleList = (input: List): string => `<p><a class="button" onclick="change('${input.id}-detail')">${input.text}</a></p><div class="detail-container" id="${input.id}-detail">${input.content.map(matcher(false)).join("")}</div>`
-
-const matcher = (top: boolean) => (input: Button | Text | List): string => {
-    switch (input.type) {
-        case "button": return handleButton(input, top)
-        case "text": return handleText(input)
-        case "list": {
-            if (top) return handleList(input)
-            throw new Error("no recursive lists")
-        }
-        default: throw new Error("unknown type")
-    }
-}
-
-const handleContainer = (input: Container): string => `<div class="button-container">${input.content.map(matcher(true)).join("")}</div>`
+type StringMap = Record<string, string>
 
 /* TODO enhance performance by using string[] as string builders */
-const insert = (template: string, content: Record<string, string>) => {
+const insert = (template: string, content: StringMap) => {
     let current = template
     for (const [key, val] of Object.entries(content)) {
         const splited = current.split(key)
@@ -58,16 +17,50 @@ const insert = (template: string, content: Record<string, string>) => {
     return current
 }
 
-Deno.writeTextFileSync(
-    "../nginx/wwwroot/index.html",
-    insert(
-        Deno.readTextFileSync("./index.prebuild.html"),
+const getCopyright = async (): Promise<string> => {
+    const gitProc = Deno.run({
+        cmd: ["git", "log", "-1", '--pretty=format:"%h"'],
+        cwd: "./",
+        stdout: "piped",
+    })
+    return `<!--
+  Copyright 2021 stackinspector. MIT Lincese.
+  Source code: https://github.com/stackinspector/LDTstore
+  Commit: ${decodeText(await gitProc.output())}
+-->
+`
+}
+
+const getModulesMap = async (): Promise<StringMap> => {
+    const MODULE_PATH = "./build/modules/"
+    const map: StringMap = {}
+    for await (const item of Deno.readDir(MODULE_PATH)) {
+        if (item.isFile) map[`/*{{${item.name}}}*/`] = await Deno.readTextFile(MODULE_PATH + item.name)
+    }
+    return map
+}
+
+const minify = async (input: string): Promise<string> => {
+    const nodeProc = Deno.run({
+        cmd: ["html-minifier.cmd", "--collapse-whitespace", "--remove-comments", "--remove-tag-whitespace", "--minify-css", "true", "--minify-js", "true"],
+        cwd: "./",
+        stdin: "piped",
+        stdout: "piped",
+    })
+    await nodeProc.stdin.write(encodeText(input))
+    nodeProc.stdin.close()
+    return decodeText(await nodeProc.output())
+}
+
+await Deno.writeTextFile(
+    "./nginx/wwwroot/index.html",
+    await getCopyright() + await minify(insert(
+        await Deno.readTextFile("./build/pages/index.html"),
         {
-            "<!--{{buttons}}-->": handleContainer(
-                parseYaml(Deno.readTextFileSync("./buttons.yml")) as Container
+            ...await getModulesMap(),
+            "<!--{{buttons}}-->": getButtons(
+                parseYaml(await Deno.readTextFile("./build/dynamic/buttons.yml")) as ButtonContainer
             ),
-            "/*{{base.css}}*/": Deno.readTextFileSync("./base.css"),
-            "/*{{buttons.css}}*/": Deno.readTextFileSync("./buttons.css"),
         }
-    )
+    ))
 )
