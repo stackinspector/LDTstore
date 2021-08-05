@@ -54,28 +54,24 @@ const dynamic: Record<string, () => Promise<string>> = {
   }
 }
 
-const getCopyright = async (): Promise<string> => {
-  const gitProc = Deno.run({
-    cmd: `git log -1 --pretty=format:"%h"`.split(" "),
-    stdout: "piped",
-  })
-  return `<!--
+const gitProc = Deno.run({
+  cmd: `git log -1 --pretty=format:"%h"`.split(" "),
+  stdout: "piped",
+})
+const copyright = `<!--
   Copyright 2021 stackinspector. MIT Lincese.
   Source code: https://github.com/stackinspector/LDTstore
   Commit: ${decodeText(await gitProc.output()).replaceAll(`"`, "")}
 -->
 `
-}
 
-const getInsertMap = async (): Promise<Map<string, string>> => {
-  const map: Map<string, string> = new Map()
-  for await (const item of Deno.readDir("./build/modules")) {
-    if (item.isFile) map.set(`/*{{${item.name}}}*/`, await Deno.readTextFile("./build/modules/" + item.name))
-  }
-  for (const [name, func] of Object.entries(dynamic)) {
-    map.set(`<!--{{${name}}}-->`, await func())
-  }
-  return map
+const inserts: Map<string, string> = new Map()
+for await (const item of Deno.readDir("./build/modules")) {
+  if (!item.isFile) continue
+  inserts.set(`/*{{${item.name}}}*/`, await Deno.readTextFile("./build/modules/" + item.name))
+}
+for (const [name, func] of Object.entries(dynamic)) {
+  inserts.set(`<!--{{${name}}}-->`, await func())
 }
 
 const minify = async (input: string): Promise<string> => {
@@ -88,7 +84,10 @@ const minify = async (input: string): Promise<string> => {
   return decodeText(await nodeProc.output())
 }
 
-await Deno.writeTextFile(
-  "./nginx/wwwroot/index.html",
-  await getCopyright() + await minify(insert(await Deno.readTextFile("./build/pages/index.html"), await getInsertMap()))
-)
+for await (const item of Deno.readDir("./build/pages")) {
+  if (!(item.isFile && item.name.substring(item.name.length - 5) === ".html")) continue
+  await Deno.writeTextFile(
+    `./nginx/wwwroot/${item.name}`,
+    copyright + await minify(insert(await Deno.readTextFile(`./build/pages/${item.name}`), inserts))
+  )
+}
