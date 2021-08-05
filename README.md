@@ -1,6 +1,12 @@
 # LDTstore.com.cn
 
-## Process to Deploy and Recycle
+## Build, Deploy and Recycle
+
+First run the build script locally. Make sure that deno is installed locally.
+
+Considering that dealing with deno compatibility of npm packages is not an easy task, currently `html-minifier` is run by calling node. So you also need to make sure that the global npm package `html-minifier` is installed in your local environment. The build script can currently only be run under Windows due to a minor detail in the calling under Windows. In the future it will be possible to make `html-minifier` run directly in deno.
+
+When you get ready, run `deno run --allow-read --allow-write --allow-run build/build.ts` locally in the repo directory.
 
 Ensure that `/server/cert` contains the 2 certificate files and the generated dhparam file `dh4096.pem`.
 
