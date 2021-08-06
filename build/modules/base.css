@@ -21,16 +21,20 @@ a.link {
   color: #00a1d6;
 }
 
-a.footer-link {
-  color: #999;
+a.hidden-link {
+  color: inherit;
 }
 
-a.link:hover {
+a.link:hover, a.hidden-link:hover {
   color: #00b5e5;
 }
 
-/* containers */
+/* footer */
 
 div#footer-container {
   bottom: 0;
+}
+
+div#footer-container p {
+  color: #999;
 }
