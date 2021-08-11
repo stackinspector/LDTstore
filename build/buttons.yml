@@ -4,9 +4,6 @@ content:
     target: home
     text: "老弟一号个人空间"
   - type: button
-    target: home-ops
-    text: "运营官方账号"
-  - type: button
     target: store
     text: "LDTstore淘宝店铺"
   - type: list
@@ -61,6 +58,9 @@ content:
       - type: button
         target: group-readme-1
         text: "核心群入群测试"
+  - type: button
+    target: home-ops
+    text: "运营信息发布账号"
   - type: list
     id: outer
     text: "站外官方账号"
@@ -94,7 +94,10 @@ content:
         text: "好看视频 LaodiTeachTips"
       - type: text
         footer: true
-        text: "关于站外账号的运营详情<br>请参阅<b>运营官方账号置顶动态</b>"
+        text: "关于站外账号的详细信息<br>请参阅<b>运营信息发布账号的置顶动态</b>"
+  - type: button
+    target: afdian
+    text: "赞助老弟一号"
   - type: list
     id: business
     text: "商务合作"
