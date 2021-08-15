@@ -87,7 +87,7 @@ const minify = async (input: string): Promise<string> => {
 for await (const item of Deno.readDir("./build/pages")) {
   if (!(item.isFile && item.name.substring(item.name.length - 5) === ".html")) continue
   await Deno.writeTextFile(
-    `./nginx/wwwroot/${item.name}`,
+    `./wwwroot/${item.name}`,
     copyright + await minify(insert(await Deno.readTextFile(`./build/pages/${item.name}`), inserts))
   )
 }
