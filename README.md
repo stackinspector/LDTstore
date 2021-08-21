@@ -43,20 +43,19 @@ rm -r wwwroot
 ### Update Redirect Routes
 
 ```bash
-cd /server
+cd /server/apps/http-redirector
 pkill http-redirector
-nohup ./apps/http-redirector -p 10305 -c "https://cdn.jsdelivr.net/gh/stackinspector/LDTstore/app/redirect/redirect" &
+nohup ./http-redirector -p 10305 -c "https://cdn.jsdelivr.net/gh/stackinspector/LDTstore/app/redirect/redirect" &
 ```
 
 ### Update Redirect Service
 
 ```bash
-cd /server/apps
+cd /server/apps/http-redirector
 pkill http-redirector
 rm http-redirector
-wget https://download.fastgit.org/stackinspector/http-redirector/releases/download/[version]/http-redirector_v0.1.0_x86_64-unknown-linux-musl.zip
-unzip http-redirector_v0.1.0_x86_64-unknown-linux-musl.zip
-rm http-redirector_v0.1.0_x86_64-unknown-linux-musl.zip
-cd ..
-nohup ./apps/http-redirector -p 10305 -c "https://cdn.jsdelivr.net/gh/stackinspector/LDTstore/app/redirect/redirect" &
+wget -O tmp.zip https://download.fastgit.org/stackinspector/http-redirector/releases/download/[version]/http-redirector_[version]_x86_64-unknown-linux-musl.zip
+unzip tmp.zip
+rm tmp.zip
+nohup ./http-redirector -p 10305 -c "https://cdn.jsdelivr.net/gh/stackinspector/LDTstore/app/redirect/redirect" &
 ```
