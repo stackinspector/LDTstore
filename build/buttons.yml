@@ -68,9 +68,9 @@ content:
       - type: button
         target: outer-zh
         text: "知乎 老弟一号" # LaodiTeachTips
-      - type: button
-        target: outer-ac
-        text: "AcFun LaodiTeachTips"
+      # - type: button
+      #   target: outer-ac
+      #   text: "AcFun LaodiTeachTips"
       - type: button
         target: outer-yt
         text: "YouTube LaodiTeachTips"
@@ -80,21 +80,21 @@ content:
       - type: button
         target: outer-mz
         text: "喵喵折 LaodiTeachTips"
-      - type: button
-        target: outer-ks
-        text: "快手 LDTeachTips" # LaodiTeachTips
-      - type: button
-        target: null
-        text: "抖音 LaodiTeachTips" # LaodiTeachtips
-      - type: button
-        target: outer-xg
-        text: "西瓜视频 LaodiTeachTips"
-      - type: button
-        target: outer-tt
-        text: "今日头条 LaodiTeachTips"
-      - type: button
-        target: outer-bh
-        text: "好看视频 LaodiTeachTips"
+      # - type: button
+      #   target: outer-ks
+      #   text: "快手 LDTeachTips" # LaodiTeachTips
+      # - type: button
+      #   target: null
+      #   text: "抖音 LaodiTeachTips" # LaodiTeachtips
+      # - type: button
+      #   target: outer-xg
+      #   text: "西瓜视频 LaodiTeachTips"
+      # - type: button
+      #   target: outer-tt
+      #   text: "今日头条 LaodiTeachTips"
+      # - type: button
+      #   target: outer-bh
+      #   text: "好看视频 LaodiTeachTips"
       - type: text
         footer: true
         text: "以上均为<b>显示昵称</b><br>关于站外账号的详细信息<br>请参阅<b>运营信息发布账号的置顶动态</b>"
