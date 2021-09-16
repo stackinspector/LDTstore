@@ -54,8 +54,6 @@ nohup ./http-redirector -p 10305 -c "https://cdn.jsdelivr.net/gh/stackinspector/
 cd /server/apps/http-redirector
 pkill http-redirector
 rm http-redirector
-wget -O tmp.zip https://download.fastgit.org/stackinspector/http-redirector/releases/download/[version]/http-redirector_[version]_x86_64-unknown-linux-musl.zip
-unzip tmp.zip
-rm tmp.zip
+wget -O- https://download.fastgit.org/stackinspector/http-redirector/releases/download/[version]/http-redirector_[version]_x86_64-unknown-linux-musl.tar.xz | tar xv --lzma
 nohup ./http-redirector -p 10305 -c "https://cdn.jsdelivr.net/gh/stackinspector/LDTstore/app/redirect/redirect" &
 ```
