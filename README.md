@@ -10,6 +10,7 @@ Log in to the remote server as root.
 
 ```bash
 cd /server
+# (when full restart) pkill http-redirector
 nginx -s quit
 tail -n 20 nginx/logs/error # test
 tar caf nginx.tar.xz nginx
@@ -19,6 +20,8 @@ rm -r nginx nginx.tar.xz
 mkdir ./nginx ./nginx/logs
 cd nginx
 wget https://cdn.jsdelivr.net/gh/stackinspector/LDTstore/nginx/nginx.conf
+# (when full restart) cd /server/apps/http-redirector
+# (when full restart) nohup ./http-redirector -p 10305 -c "https://cdn.jsdelivr.net/gh/stackinspector/LDTstore/app/redirect/redirect" &
 cd ..
 nginx -p /server/nginx -c /server/nginx/nginx.conf
 cat nginx/logs/error # test
