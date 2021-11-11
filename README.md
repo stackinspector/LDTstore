@@ -31,6 +31,8 @@ Note that after updating nginx, the service will automatically start with the de
 
 ### Update Pages
 
+**new page see github.com/stackinspector/ldtstore-homepage/**
+
 First run the build script locally. Make sure that deno is installed locally.
 
 Considering that dealing with deno compatibility of npm packages is not an easy task, currently `html-minifier` is run by calling node. So you also need to make sure that the global npm package `html-minifier` is installed in your local environment. The build script can currently only be run under Windows due to a minor detail in the calling under Windows. In the future it will be possible to make `html-minifier` run directly in deno.
