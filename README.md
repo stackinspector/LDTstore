@@ -10,7 +10,7 @@ Log in to the remote server as root.
 
 ```bash
 cd /server
-# (when full restart) pkill http-redirector
+# (when full restart) ps -ef|grep http-redirector|grep -v grep|cut -c 9-15|xargs kill -9
 nginx -s quit
 tail -n 20 nginx/logs/error # test
 tar caf nginx.tar.xz nginx
@@ -19,9 +19,8 @@ sha256sum nginx.tar.xz
 rm -r nginx nginx.tar.xz
 mkdir ./nginx ./nginx/logs
 cd nginx
-wget https://cdn.jsdelivr.net/gh/stackinspector/LDTstore/nginx/nginx.conf
-# (when full restart) cd /server/apps/http-redirector
-# (when full restart) nohup ./http-redirector -p 10305 -c "https://cdn.jsdelivr.net/gh/stackinspector/LDTstore/app/redirect/redirect" &
+wget https://cdn.jsdelivr.net/gh/stackinspector/LDTstore@latest/nginx/nginx.conf
+# when full restart, go to "Update Redirect Routes"
 cd ..
 nginx -p /server/nginx -c /server/nginx/nginx.conf
 cat nginx/logs/error # test
@@ -45,20 +44,15 @@ rm -r wwwroot
 # (immediately) upload [repo]/wwwroot to the remote /server
 ```
 
-### Update Redirect Routes
+### Update Redirect Routes / Service
 
 ```bash
 cd /server/apps/http-redirector
-pkill http-redirector
-nohup ./http-redirector -p 10305 -c "https://cdn.jsdelivr.net/gh/stackinspector/LDTstore/app/redirect/redirect" &
-```
-
-### Update Redirect Service
-
-```bash
-cd /server/apps/http-redirector
-pkill http-redirector
+ps -ef|grep http-redirector|grep -v grep|cut -c 9-15|xargs kill -9
+# if update service
 rm http-redirector
 wget -O- https://download.fastgit.org/stackinspector/http-redirector/releases/download/[version]/http-redirector_[version]_x86_64-unknown-linux-musl.tar.xz | tar xv --lzma
-nohup ./http-redirector -p 10305 -c "https://cdn.jsdelivr.net/gh/stackinspector/LDTstore/app/redirect/redirect" &
+# end if update service
+nohup ./http-redirector -p 10305 -c "https://cdn.jsdelivr.net/gh/stackinspector/LDTstore@latest/app/redirect/r" &
+nohup ./http-redirector -p 20610 -c "https://cdn.jsdelivr.net/gh/stackinspector/LDTstore@latest/app/redirect/r2" &
 ```

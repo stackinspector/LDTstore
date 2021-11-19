@@ -1,6 +1,6 @@
 import { parse as parseYaml } from "https://deno.land/std@0.102.0/encoding/yaml.ts"
-import { encodeText, decodeText } from "https://cdn.jsdelivr.net/gh/Berylsoft/DenoBase/textcodec.ts"
-import { insert } from "https://cdn.jsdelivr.net/gh/Berylsoft/DenoBase/insert-string.ts"
+import { encodeText, decodeText } from "https://cdn.jsdelivr.net/gh/stackinspector/DenoBase@latest/textcodec.ts"
+import { insert } from "https://cdn.jsdelivr.net/gh/stackinspector/DenoBase@latest/insert-string.ts"
 
 const dynamic: Record<string, () => Promise<string>> = {
   buttons: async () => {
