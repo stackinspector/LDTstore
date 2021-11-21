@@ -13,8 +13,6 @@ yjws-spec-1      www.bilibili.com/read/cv9441770
 
 icu              t.bilibili.com/topic/19015795/
 icu-newtopic     www.bilibili.com/v/topic/detail?topic_id=3519
-icu-fw           t.bilibili.com/topic/19015795/
-icu-fw-newtopic  www.bilibili.com/v/topic/detail?topic_id=3519
 icu-spec-11      t.bilibili.com/517514512308129375
 icu-spec-1       t.bilibili.com/509713064997691116
 
@@ -42,3 +40,10 @@ poweredby-2      space.bilibili.com/355580496/
 poweredby-3      space.bilibili.com/198340919/
 website-github   github.com/stackinspector/LDTstore/
 homepage-github  github.com/stackinspector/ldtstore-homepage/
+
+fw-ltt-cn        ldtstore.com.cn/
+fw-ltt-com       ldtstore.com.cn/
+fw-icu           t.bilibili.com/topic/19015795/
+fw-icu-newtopic  www.bilibili.com/v/topic/detail?topic_id=3519
+fw-ldtool        ldtstore.com.cn/ldtools
+fw-ldtools       ldtstore.com.cn/ldtools

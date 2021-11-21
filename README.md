@@ -48,7 +48,7 @@ rm -r wwwroot
 
 ```bash
 cd /server/apps/http-redirector
-ps -ef|grep http-redirector|grep -v grep|cut -c 9-15|xargs kill -9
+ps -ef|grep http-redirector|grep -v grep|cut -c 10-16|xargs kill -9
 # if update service
 rm http-redirector
 wget -O- https://download.fastgit.org/stackinspector/http-redirector/releases/download/[version]/http-redirector_[version]_x86_64-unknown-linux-musl.tar.xz | tar xv --lzma
