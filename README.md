@@ -10,7 +10,7 @@ Log in to the remote server as root.
 
 ```bash
 cd /server
-# (when full restart) ps -ef|grep hr|grep -v grep|cut -c 10-16|xargs kill -9
+# (when full restart) ps -ef|grep hr|grep -v grep|cut -c 10-16|xargs kill -INT
 nginx -s quit
 tail -n 20 nginx/logs/error # test
 tar caf nginx.tar.xz nginx
@@ -36,7 +36,7 @@ Note that after updating nginx, the service will automatically start with the de
 
 ```bash
 cd /server/apps/redirect
-ps -ef|grep hr|grep -v grep|cut -c 10-16|xargs kill -9
+ps -ef|grep hr|grep -v grep|cut -c 10-16|xargs kill -INT
 # if update service
 rm hr
 wget -O- https://download.fastgit.org/stackinspector/http-redirector/releases/download/[version]/http-redirector_[version]_x86_64-unknown-linux-musl.tar.xz | tar xv --lzma
