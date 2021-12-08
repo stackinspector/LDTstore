@@ -30,17 +30,27 @@ Note that after updating nginx, the service will automatically start with the de
 
 ### Update Pages
 
-**see github.com/stackinspector/ldtstore-homepage/**
+see [ldtstore-homepage](https://github.com/stackinspector/ldtstore-homepage/)
+
+```bash
+cd /server
+mv wwwroot _wwwroot
+# (immediately) upload built wwwroot to the remote /server
+```
 
 ### Update Redirect Routes / Service
 
 ```bash
+# upload [repo]/app/redirect/r & [repo]/app/redirect/r2 to the remote /server/apps/redirect
 cd /server/apps/redirect
-ps -ef|grep hr|grep -v grep|cut -c 10-16|xargs kill -INT
+ps -ef|grep hr|grep -v grep # get pids
+kill -INT [pids]
 # if update service
 rm hr
-wget -O- https://download.fastgit.org/stackinspector/http-redirector/releases/download/[version]/http-redirector_[version]_x86_64-unknown-linux-musl.tar.xz | tar xv --lzma
+wget https://download.fastgit.org/stackinspector/http-redirector/releases/download/[version]/http-redirector_[version]_x86_64-unknown-linux-musl.tar.xz -O hr.tar.xz
+tar xv hr.tar.xz --lzma
+rm hr.tar.xz
 # end if update service
-nohup ./hr -p 10305 -c "https://cdn.jsdelivr.net/gh/stackinspector/LDTstore@latest/app/redirect/r" -l "/server/apps/redirect/data/r/" &
-nohup ./hr -p 20610 -c "https://cdn.jsdelivr.net/gh/stackinspector/LDTstore@latest/app/redirect/r2" -l "/server/apps/redirect/data/r2/" &
+nohup ./hr -p 10305 -c "/server/apps/redirect/r" -l "/server/apps/redirect/data/r/" &
+nohup ./hr -p 20610 -c "/server/apps/redirect/r2" -l "/server/apps/redirect/data/r2/" &
 ```
