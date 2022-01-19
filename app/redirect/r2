@@ -10,6 +10,19 @@ itellyou-next next.itellyou.cn
 
 cpu-rank-qdy tieba.baidu.com/p/5005825360
 gpu-rank-qdy tieba.baidu.com/p/6133450546
+rank-expreview topic.expreview.com/Power/
+rank-passmark-cpu www.cpubenchmark.net/cpu_list.php
+rank-passmark-gpu www.videocardbenchmark.net/directCompute.html
+rank-passmark-ssd www.harddrivebenchmark.net/ssd.html
+rank-techpowerup www.techpowerup.com/gpu-specs/
+rank-kkj rank.kkj.cn/dgpu3.shtml
+rank-zol cpu.zol.com.cn/soc/
+rank-socpk www.socpk.com
+rank-p-pccomp zhuanlan.zhihu.com/p/127042304
+rank-p-supergsg-v1 http://blog.sina.com.cn/s/blog_1696a5af50102xiju.html
+rank-p-supergsg-v2 bbs.kafan.cn/thread-2091905-1-1.html
+rank-fcp www.fcpowerup.com/fcpmark/
+rank-p-mem zhuanlan.zhihu.com/p/163842976
 
 tbinfo http://www.tbtool.cc
 aida64 www.aida64.com
@@ -21,19 +34,25 @@ cinebench www.maxon.net/zh/cinebench
 fritz-chess www.jens-hartmann.at/Fritzmarks/
 superpi http://www.superpi.net
 wprime http://www.wprime.net
+baiyan epcdiy.org
+blender-test opendata.blender.org
 intel-xtu www.intel.com/content/www/us/en/download/17881/intel-extreme-tuning-utility-intel-xtu.html
 amd-ryzen-master www.amd.com/zh-hans/technologies/ryzen-master
 throttle-stop www.techpowerup.com/download/techpowerup-throttlestop/
+ctr www.guru3d.com/files-details/clocktuner-for-ryzen-download.html
 hydra www.patreon.com/1usmus
 
 memtest www.memtest.org
 rmtp nga.178.com/read.php?tid=20355919
 tm5 ngabbs.com/read.php?tid=19968200
+tm5-official testmem.tz.ru
+zentimings zentimings.protonrom.com
 thaiphoon softnology.biz
 
 gpuz www.techpowerup.com/gpuz/
 gpuinfo newbietech.net
 gpucaps ozone3d.net/gpu_caps_viewer/
+easymats www.bilibili.com/read/cv9422803
 ddu www.wagnardsoft.com
 msi-afterburner www.msi.com/Landing/afterburner
 nvidia-inspector www.techpowerup.com/download/nvidia-inspector/
@@ -45,6 +64,8 @@ cdm crystalmark.info/en/software/crystaldiskmark/
 atto www.atto.com/disk-benchmark/
 hdtune www.hdtune.com
 mydisktest http://bbs.mydigit.cn/read.php?tid=257909
+partassist www.disktool.cn
+victoria hdd.by/victoria/
 ssdz http://aezay.dk/aezay/ssdz/
 llf hddguru.com/software/HDD-LLF-Low-Level-Format-Tool/
 h2testw h2testw.en.lo4d.com/windows
@@ -52,7 +73,10 @@ anvil www.guru3d.com/files-details/anvils-storage-utilities-download.html
 
 rufus rufus.ie
 ventoy www.ventoy.net
+wmct-10 www.microsoft.com/zh-cn/software-download/windows10
+wmct-11 www.microsoft.com/zh-cn/software-download/windows11
 cmwtat cmwtat.cloudmoe.com
+vcrtpack www.techpowerup.com/download/visual-c-redistributable-runtime-package-all-in-one/
 
 p95 www.mersenne.org/download/
 furmark www.geeks3d.com/furmark/
