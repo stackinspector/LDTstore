@@ -51,6 +51,6 @@ wget https://download.fastgit.org/stackinspector/http-redirector/releases/downlo
 tar xv hr.tar.xz --lzma
 rm hr.tar.xz
 # end if update service
-nohup ./hr -p 10305 -c "/server/apps/redirect/r" -l "/server/apps/redirect/data/r/" &
-nohup ./hr -p 20610 -c "/server/apps/redirect/r2" -l "/server/apps/redirect/data/r2/" &
+nohup ./hr -p 10305 -c "/server/apps/redirect/r" -l "/server/apps/redirect/access/r" &
+nohup ./hr -p 20610 -c "/server/apps/redirect/r2" -l "/server/apps/redirect/access/r2" &
 ```
