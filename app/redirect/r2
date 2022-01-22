@@ -1,6 +1,7 @@
 tbtool http://www.tbtool.cn
 kbtool http://www.kbtool.cn
 dismxx www.chuyu.me
+dismxx-ghr github.com/Chuyu-Team/Dism-Multi-language/releases/
 techpowerup www.techpowerup.com/download/
 geeks3d www.geeks3d.com/dlz/
 guru3d www.guru3d.com/files/index.html
@@ -31,6 +32,10 @@ speccy www.ccleaner.com/speccy
 
 cpuz www.cpuid.com/softwares/cpu-z.html
 cinebench www.maxon.net/zh/cinebench
+cinebench-d-r115 http.maxon.net/pub/benchmarks/CINEBENCH_11.529.zip
+cinebench-d-r15 http.maxon.net/pub/benchmarks/CINEBENCH_R15.zip
+cinebench-d-r20 http.maxon.net/pub/cinebench/CinebenchR20.zip
+cinebench-d-r23 http.maxon.net/pub/cinebench/CinebenchR23.zip
 fritz-chess www.jens-hartmann.at/Fritzmarks/
 superpi http://www.superpi.net
 wprime http://www.wprime.net
@@ -84,14 +89,11 @@ furmark www.geeks3d.com/furmark/
 cru www.monitortests.com/forum/Thread-Custom-Resolution-Utility-CRU
 ufotest www.testufo.com
 keyboard-trigger www.zfrontier.com/lab/keyboardTester
+monitor-test screen.bmcx.com
+mouse-test-web cps-check.com
 
 chipgenius www.mydigit.cn/forum.php?mod=viewthread&tid=263544
 geekuninstaller geekuninstaller.com
 windirstat windirstat.net
 
-d-cinebench-r20 http.maxon.net/pub/cinebench/CinebenchR20.zip
-d-cinebench-r23 http.maxon.net/pub/cinebench/CinebenchR23.zip
-
 p-itellyou-msdn t.bilibili.com/599980727663243686
-
-ghr-dismxx github.com/Chuyu-Team/Dism-Multi-language/releases/
