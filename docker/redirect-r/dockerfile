@@ -1,0 +1,4 @@
+FROM alpine:latest
+WORKDIR /usr/src/app
+COPY ./hr /usr/src/app
+ENTRYPOINT ["./hr", "-c", "https://ldtstore.com.cn/_appdata/r", "-p", "9000"]
