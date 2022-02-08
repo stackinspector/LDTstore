@@ -1,4 +1,4 @@
 FROM alpine:latest
 WORKDIR /usr/src/app
 COPY ./hr /usr/src/app
-ENTRYPOINT ["./hr", "-c", "https://ldtstore.com.cn/_appdata/r2", "-p", "9000", "-x", "r2"]
+ENTRYPOINT ["./hr", "-c", "https://raw.githubusercontent.com/stackinspector/LDTstore/main/app/redirect/r2", "-p", "9000", "-x", "r2"]

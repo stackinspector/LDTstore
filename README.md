@@ -21,10 +21,9 @@ mkdir redirect-r redirect-r2
 wget https://download.fastgit.org/stackinspector/http-redirector/releases/download/[version]/http-redirector_[version]_x86_64-unknown-linux-musl.tar.xz -O hr.tar.xz
 tar xvf hr.tar.xz --lzma
 rm hr.tar.xz
+chmod 755 ./hr
 cp ./hr ./redirect-r/
 cp ./hr ./redirect-r2/
-chmod 755 ./redirect-r/hr
-chmod 755 ./redirect-r2/hr
 docker build redirect-r # => [imgid-r]
 docker build redirect-r2 # => [imgid-r2]
 docker tag [imgid-r] path/to/redirect-r:[version]
