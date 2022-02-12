@@ -10,24 +10,15 @@ For **images** on the pages, see [ldtstore-assert](https://github.com/stackinspe
 
 For the generic http **redirect** service used on `/r` and `/r2`, see [http-redirector](https://github.com/stackinspector/http-redirector/)
 
-## Build Docker Images for `redirect-r` and `redirect-r2`
+## Build Docker Images for Redirect Service
 
 Prepare a linux VM with docker installed locally for building images. Login as `root`.
 
 ```bash
-mkdir redirect-r redirect-r2
-# upload [repo]/docker/redirect-r/dockerfile to [remote]/root/redirect-r/dockerfile
-# upload [repo]/docker/redirect-r2/dockerfile to [remote]/root/redirect-r2/dockerfile
-wget https://download.fastgit.org/stackinspector/http-redirector/releases/download/[version]/http-redirector_[version]_x86_64-unknown-linux-musl.tar.xz -O hr.tar.xz
-tar xvf hr.tar.xz --lzma
-rm hr.tar.xz
-chmod 755 ./hr
-cp ./hr ./redirect-r/
-cp ./hr ./redirect-r2/
-docker build redirect-r # => [imgid-r]
-docker build redirect-r2 # => [imgid-r2]
-docker tag [imgid-r] path/to/redirect-r:[version]
-docker tag [imgid-r2] path/to/redirect-r2:[version]
-docker push path/to/redirect-r:[version]
-docker push path/to/redirect-r2:[version]
+mkdir redirect && cd "$_"
+# upload [repo]/docker/redirect/dockerfile to [remote]/root/redirect/dockerfile
+wget -O- https://download.fastgit.org/stackinspector/http-redirector/releases/download/[version]/http-redirector_[version]_x86_64-unknown-linux-musl.tar.xz | tar xv --lzma
+chmod 755 hr
+docker build -t path/to/redirect:[version] .
+docker push path/to/redirect:[version]
 ```
