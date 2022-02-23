@@ -6,9 +6,12 @@ dismxx-ghr github.com/Chuyu-Team/Dism-Multi-language/releases/
 techpowerup www.techpowerup.com/download/
 geeks3d www.geeks3d.com/dlz/
 guru3d www.guru3d.com/files/index.html
+nirsoft www.nirsoft.net
 
 itellyou-old msdn.itellyou.cn
 itellyou-next next.itellyou.cn
+techbench-os tb.rg-adguard.net/public.php
+techbench-store store.rg-adguard.net/
 
 cpu-rank-qdy tieba.baidu.com/p/5005825360
 gpu-rank-qdy tieba.baidu.com/p/6133450546
@@ -25,11 +28,43 @@ rank-p-supergsg-v1 http://blog.sina.com.cn/s/blog_1696a5af50102xiju.html
 rank-p-supergsg-v2 bbs.kafan.cn/thread-2091905-1-1.html
 rank-fcp www.fcpowerup.com/fcpmark/
 rank-p-mem zhuanlan.zhihu.com/p/163842976
+rank-p-laptop-cpu www.365pcbuy.com/article-409.html
+rank-p-laptop-gpu www.365pcbuy.com/article-398.html
+rank-toms-cpu www.tomshardware.com/reviews/cpu-hierarchy,4312.html
+rank-toms-gpu www.tomshardware.com/reviews/gpu-hierarchy,4388.html
+data-ark ark.intel.com/content/www/cn/zh/ark.html
+data-cw www.cpu-world.com
+data-cpumonkey www.cpu-monkey.com/zh-cn/
+data-panelook www.panelook.cn
+rank-versus versus.com/cn
+rank-octanebench render.otoy.com/octanebench/results.php
+rank-keyshot www.kayshot.com/keyshot9
+
+drv-intel www.intel.cn/content/www/cn/zh/download-center/home.html
+drv-amd www.amd.com/zh-hans/support
+drv-nvidia-old www.nvidia.cn/Download/index.aspx?lang=cn
+drv-nvidia-new www.nvidia.cn/geforce/drivers/
+drv-asus www.asus.com.cn/support/Download-Center/
+drv-msi cn.msi.com/support/download
+drv-asrock www.asrockchina.com.cn/support/index.cn.asp
+drv-maxsun http://www.maxsun.com.cn/down/mb/intel/
+drv-biostar http://www.biostar.com.cn/app/en-us/support/download.php
+drv-gigabyte www.gigabyte.cn/Support
+drv-colorful www.colorful.cn/server.aspx?classid=2825
+drv-galaxy http://www.szgalaxy.com/__ZH_GB__/Product5/ProductIndex
+drv-soyo http://www.soyocn.net/down/
+drv-shengqi http://www.shengqipc.cn/d0.html
+drv-onda http://www.onda.cn/Services.aspx
 
 tbinfo http://www.tbtool.cc
 aida64 www.aida64.com
 hwinfo www.hwinfo.com
 speccy www.ccleaner.com/speccy
+geekbench www.geekbench.com
+sisoft www.sisoftware.co.uk
+hwmon www.cpuid.com/softwares/hwmonitor.html
+coretemp www.alcpu.com/CoreTemp/
+traffic-monitor github.com/zhongyang219/TrafficMonitor/
 
 cpuz www.cpuid.com/softwares/cpu-z.html
 cinebench www.maxon.net/zh/cinebench
@@ -45,8 +80,11 @@ blender-test opendata.blender.org
 intel-xtu www.intel.com/content/www/us/en/download/17881/intel-extreme-tuning-utility-intel-xtu.html
 amd-ryzen-master www.amd.com/zh-hans/technologies/ryzen-master
 throttle-stop www.techpowerup.com/download/techpowerup-throttlestop/
+ryzen-controller ryzencontroller.com
+ryzen-controller-gl gitlab.com/ryzen-controller-team/ryzen-controller
 ctr www.guru3d.com/files-details/clocktuner-for-ryzen-download.html
 hydra www.patreon.com/1usmus
+setfsb www.majorgeeks.com/files/details/setfsb.html
 
 memtest www.memtest.org
 rmtp nga.178.com/read.php?tid=20355919
@@ -62,6 +100,8 @@ easymats www.bilibili.com/read/cv9422803
 ddu www.wagnardsoft.com
 msi-afterburner www.msi.com/Landing/afterburner
 nvidia-inspector www.techpowerup.com/download/nvidia-inspector/
+vgabios www.techpowerup.com/vgabios/
+nvidia-profile-inspector github.com/Orbmu2k/nvidiaProfileInspector/
 
 diskgen www.diskgenius.cn
 asssd www.guru3d.com/files-details/as-ssd-benchmark.html
@@ -76,7 +116,13 @@ ssdz http://aezay.dk/aezay/ssdz/
 txbench www.texim.jp/txbenchus.html
 llf hddguru.com/software/HDD-LLF-Low-Level-Format-Tool/
 h2testw h2testw.en.lo4d.com/windows
+iometer http://www.iometer.org/
 anvil www.guru3d.com/files-details/anvils-storage-utilities-download.html
+hdsentinel www.hdsentinel.com
+hdsentinel-zh www.52pojie.cn/forum.php?mod=viewthread&tid=1429692
+rstudio www.r-studio.com/zhcn/data-recovery-software/
+recuva www.ccleaner.com/recuva
+ssd-fresh www.abelssoft.de/en/windows/system-utilities/ssd-fresh
 
 rufus rufus.ie
 ventoy www.ventoy.net
@@ -84,9 +130,17 @@ wmct-10 www.microsoft.com/zh-cn/software-download/windows10
 wmct-11 www.microsoft.com/zh-cn/software-download/windows11
 cmwtat cmwtat.cloudmoe.com
 vcrtpack www.techpowerup.com/download/visual-c-redistributable-runtime-package-all-in-one/
+vcrtpack-ya www.mefcl.com/yxk-dreamcast/249
+dx-repair blog.csdn.net/vbcom/article/details/6962388
+intel-dsa www.intel.cn/content/www/cn/zh/support/intel-driver-support-assistant.html
 easyu www.upe.net
 wepe www.wepe.com.cn
 edgeless home.edgeless.top
+firpe www.firpe.cn
+hotpe www.hotpe.top
+uui www.pendrivelinux.com/universal-usb-installer-easy-as-1-2-3/
+wtga bbs.luobotou.org/thread-761-1-1.html
+wtga-gh github.com/nkc3g4/wtg-assistant
 
 p95 www.mersenne.org/download/
 furmark www.geeks3d.com/furmark/
@@ -94,17 +148,48 @@ furmark www.geeks3d.com/furmark/
 cru www.monitortests.com/forum/Thread-Custom-Resolution-Utility-CRU
 ufotest www.testufo.com
 keyboard-trigger www.zfrontier.com/lab/keyboardTester
-monitor-test screen.bmcx.com
+monitor-test http://www.lagom.nl/lcd-test/zhs_index.php
 mouse-test-web cps-check.com
+monitor-bdw linustechtips.com/topic/729232-guide-to-display-cables-adapters-v2/
+mouse-rate-checker clickspeeder.com/mouse-rate-checker/
+passmark-keytest www.passmark.com/products/keytest/index.php
 
 chipgenius www.mydigit.cn/forum.php?mod=viewthread&tid=263544
 geekuninstaller geekuninstaller.com
+everything www.voidtools.com/zh-cn/
 windirstat windirstat.net
+wiztree www.diskanalyzer.com
+spacesniffer http://www.uderzo.it/main_products/space_sniffer/
 desktopok www.softwareok.com/?Download=DesktopOK
 ccleaner www.ccleaner.com
-7zip 7zip.org
+7zip 7-zip.org
+bandizip www.bandisoft.com/bandizip/
+bandizip-dl www.bandisoft.com/bandizip/dl/
+bandizip-v6 www.bandisoft.com/bandizip/old/6/
+bandizip-d-v6 it.bandisoft.com/bandizip/dl.php?old
+bandizip-d-v6-portable it.bandisoft.com/bandizip/dl.php?old-portable
 fastcopy fastcopy.jp
+choeazycopy github.com/Cinchoo/ChoEazyCopy
 freefilesync freefilesync.org
+softcnkiller blog.csdn.net/hfhbutn/article/details/104799162
+speedtest www.speedtest.net
+powertoys docs.microsoft.com/zh-cn/windows/powertoys/
+autoruns docs.microsoft.com/en-us/sysinternals/downloads/autoruns
+eartrumpet eartrumpet.app
+eartrumpet-msstore www.microsoft.com/zh-cn/p/eartrumpet/9nblggh516xp
+snipaste zh.snipaste.com
+snipaste-msstore www.microsoft.com/zh-cn/p/snipaste/9p1wxpkb68kx
+ditto ditto-cp.sourceforge.io
+ditto-msstore www.microsoft.com/en-us/p/ditto-clipboard/9nblggh3zbjq
+utools www.u.tools
+quicklook-msstore www.microsoft.com/en-us/p/quicklook/9nv4bs3l1h4s
+revo-uninst www.revouninstaller.com
+uninstall-tool crystalidea.com/uninstall-tool
+landrop landrop.app
+duplicatecleaner www.duplicatecleaner.com
+autosizer http://www.southbaypc.com/AutoSizer/
+uninst-adobe-cc helpx.adobe.com/cn/creative-cloud/help/uninstall-creative-cloud-desktop-app.html
+lenovo-winupdate iknow.lenovo.com.cn/detail/dc_178562.html
 
 p-itellyou-msdn t.bilibili.com/599980727663243686
 
