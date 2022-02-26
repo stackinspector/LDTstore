@@ -13,8 +13,8 @@ itellyou-next next.itellyou.cn
 techbench-os tb.rg-adguard.net/public.php
 techbench-store store.rg-adguard.net/
 
-cpu-rank-qdy tieba.baidu.com/p/5005825360
-gpu-rank-qdy tieba.baidu.com/p/6133450546
+rank-cpu-qdy tieba.baidu.com/p/5005825360
+rank-gpu-qdy tieba.baidu.com/p/6133450546
 rank-expreview topic.expreview.com/Power/
 rank-passmark-cpu www.cpubenchmark.net/cpu_list.php
 rank-passmark-gpu www.videocardbenchmark.net/directCompute.html
@@ -78,6 +78,8 @@ wprime http://www.wprime.net
 baiyan epcdiy.org
 blender-test opendata.blender.org
 intel-xtu www.intel.com/content/www/us/en/download/17881/intel-extreme-tuning-utility-intel-xtu.html
+intel-burn-test www.techpowerup.com/download/intelburntest/
+vray www.chaos.com/cn/vray/benchmark
 amd-ryzen-master www.amd.com/zh-hans/technologies/ryzen-master
 throttle-stop www.techpowerup.com/download/techpowerup-throttlestop/
 ryzen-controller ryzencontroller.com
@@ -92,6 +94,7 @@ tm5 ngabbs.com/read.php?tid=19968200
 tm5-official testmem.tz.ru
 zentimings zentimings.protonrom.com
 thaiphoon softnology.biz
+intel-mlc www.intel.cn/content/www/cn/zh/developer/articles/tool/intelr-memory-latency-checker.html
 
 gpuz www.techpowerup.com/gpuz/
 gpuinfo newbietech.net
@@ -156,6 +159,8 @@ passmark-keytest www.passmark.com/products/keytest/index.php
 
 chipgenius www.mydigit.cn/forum.php?mod=viewthread&tid=263544
 geekuninstaller geekuninstaller.com
+windbg docs.microsoft.com/zh-cn/windows-hardware/drivers/debugger/debugger-download-tools
+windbg-msstore www.microsoft.com/store/p/windbg/9pgjgd53tn86
 everything www.voidtools.com/zh-cn/
 windirstat windirstat.net
 wiztree www.diskanalyzer.com
@@ -182,6 +187,7 @@ snipaste-msstore www.microsoft.com/zh-cn/p/snipaste/9p1wxpkb68kx
 ditto ditto-cp.sourceforge.io
 ditto-msstore www.microsoft.com/en-us/p/ditto-clipboard/9nblggh3zbjq
 utools www.u.tools
+winaero-tweaker winaerotweaker.com
 quicklook-msstore www.microsoft.com/en-us/p/quicklook/9nv4bs3l1h4s
 revo-uninst www.revouninstaller.com
 uninstall-tool crystalidea.com/uninstall-tool
