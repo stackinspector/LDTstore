@@ -1,4 +1,4 @@
 FROM alpine:latest
 WORKDIR /usr/src/app
 COPY ./hr /usr/src/app
-ENTRYPOINT ["./hr", "-p", "9000", "-c", "r,https://raw.githubusercontent.com/stackinspector/LDTstore/main/app/redirect/r;r2,https://raw.githubusercontent.com/stackinspector/LDTstore/main/app/redirect/r2"]
+ENTRYPOINT ["./hr", "-p", "9000", "-c", "r,https://ldtstore.com.cn/_r/r;r2,https://ldtstore.com.cn/_r/r2;mirror-cn,https://ldtstore.com.cn/_r/mirror-cn;mirror-os,https://ldtstore.com.cn/_r/mirror-os"]

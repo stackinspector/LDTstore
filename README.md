@@ -17,7 +17,7 @@ Prepare a linux VM with docker installed locally for building images. Login as `
 ```bash
 mkdir redirect && cd "$_"
 # upload [repo]/docker/redirect/dockerfile to [remote]/root/redirect/dockerfile
-wget -O- https://download.fastgit.org/stackinspector/http-redirector/releases/download/[version]/http-redirector_[version]_x86_64-unknown-linux-musl.tar.xz | tar xv --lzma
+wget -O- https://github.com/stackinspector/http-redirector/releases/download/v0.6.0/http-redirector_v0.6.0_x86_64-unknown-linux-musl.tar.xz | tar xv --lzma
 chmod 755 hr
 docker build -t path/to/redirect:[version] .
 docker push path/to/redirect:[version]
