@@ -45,29 +45,29 @@ poweredby-3      space.bilibili.com/198340919/
 website-github   github.com/stackinspector/LDTstore/
 homepage-github  github.com/stackinspector/ldtstore-homepage/
 
-fw-ltt-cn        ldtstore.com.cn/
-fw-ltt-com       ldtstore.com.cn/
+fw-ltt-cn        ldt.pc.wiki/
+fw-ltt-com       ldt.pc.wiki/
 fw-icu           t.bilibili.com/topic/19015795/
 fw-icu-newtopic  www.bilibili.com/v/topic/detail?topic_id=3519
-fw-ldtool        ldtstore.com.cn/ldtools/
-fw-ldtools       ldtstore.com.cn/ldtools/
-fw-ldt-tools     ldtstore.com.cn/ldtools/
-fw-ldt-tools-plain ldtstore.com.cn/ldtools/plain.html
+fw-ldtool        tool.pc.wiki/
+fw-ldtools       tool.pc.wiki/
+fw-ldt-tools     tool.pc.wiki/
+fw-ldt-tools-plain tool.pc.wiki/plain.html
 
-fw-intl-main      ldtstore.net/?fw=intl-root
-fw-emerg-main     ldtstore.net/?fw=emerg-root
-fw-intl-ltt-cn    ldtstore.net/?fw=intl
-fw-intl-ltt-com   ldtstore.net/?fw=intl
-fw-intl-ldtool    ldtstore.net/ldtools/?fw=intl
-fw-intl-ldtools   ldtstore.net/ldtools/?fw=intl
-fw-intl-ldt-tools ldtstore.net/ldtools/?fw=intl
-fw-intl-ldt-tools-plain ldtstore.net/ldtools/plain
+fw-intl-main      ldt.pc.wiki/?fw=legacy-intl-root
+fw-emerg-main     ldt.pc.wiki/?fw=legacy-emerg-root
+fw-intl-ltt-cn    ldt.pc.wiki/?fw=legacy-intl
+fw-intl-ltt-com   ldt.pc.wiki/?fw=legacy-intl
+fw-intl-ldtool    tool.pc.wiki/?fw=legacy-intl
+fw-intl-ldtools   tool.pc.wiki/?fw=legacy-intl
+fw-intl-ldt-tools tool.pc.wiki/?fw=legacy-intl
+fw-intl-ldt-tools-plain tool.pc.wiki/plain.html
 
-fw-back-main     ldtstore.com.cn/
-fw-back-ldtools  ldtstore.com.cn/ldtools/
+fw-back-main     ldt.pc.wiki/
+fw-back-ldtools  tool.pc.wiki/
 
 rlwj             t.bilibili.com/topic/22702524/
 rlwj-newtopic    www.bilibili.com/v/topic/detail?topic_id=6971
 rlwj-spec-1      www.bilibili.com/read/cv14042076
 
-pcwiki-beta1     pcwiki.ldtstore.com.cn
+pcwiki-beta1     beta1.pc.wiki/

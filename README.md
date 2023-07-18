@@ -1,4 +1,4 @@
-# LDTstore.com.cn
+# LDTstore
 
 ## NOTICE
 
