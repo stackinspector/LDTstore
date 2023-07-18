@@ -66,6 +66,14 @@ fw-intl-ldt-tools-plain tool.pc.wiki/plain.html
 fw-back-main     ldt.pc.wiki/
 fw-back-ldtools  tool.pc.wiki/
 
+fw-old-home ldt.pc.wiki/
+fw-old-tool tool.pc.wiki/
+fw-old-tool-plain tool.pc.wiki/plain.html
+
+fw-old-intl-home ldt.pc.wiki/
+fw-old-intl-tool tool.pc.wiki/
+fw-old-intl-tool-plain tool.pc.wiki/plain.html
+
 rlwj             t.bilibili.com/topic/22702524/
 rlwj-newtopic    www.bilibili.com/v/topic/detail?topic_id=6971
 rlwj-spec-1      www.bilibili.com/read/cv14042076
