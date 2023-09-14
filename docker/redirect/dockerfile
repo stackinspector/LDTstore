@@ -1,4 +1,4 @@
 FROM alpine:latest
 WORKDIR /usr/src/app
 COPY ./hr /usr/src/app
-ENTRYPOINT ["./hr", "-p", "9000", "-c", "r,https://s0.ldt.pc.wiki/redirect/r;r2,https://s0.ldt.pc.wiki/redirect/r2;mirror,https://s0.ldt.pc.wiki/redirect/mirror;mirror-cn,https://s0.ldt.pc.wiki/redirect/mirror;mirror-os,https://s0.ldt.pc.wiki/redirect/mirror"]
+ENTRYPOINT ["./hr", "-p", "9000", "-c", "r,https://s0.ldt.pc.wiki/redirect/r;r2,https://s0.ldt.pc.wiki/redirect/r2;mirror,https://s0.ldt.pc.wiki/redirect/mirror;mirror-cn,https://s0.ldt.pc.wiki/redirect/mirror;mirror-os,https://s0.ldt.pc.wiki/redirect/mirror", "-h", "x-scf-request-id"]
