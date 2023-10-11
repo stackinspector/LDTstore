@@ -29,6 +29,8 @@ docker push path/to/redirect:v0.8.1
 
 Ensure that `/server/certs/ldtstore-domains` contains `key.pem` and `fullchain.pem` and dhparam file is on `/server/certs/dh4096.pem`.
 
+Nginx installed from debian apt and `libnginx-mod-http-brotli-static` and `libnginx-mod-http-brotli-filter` is installed.
+
 Log in to the remote server as `root`.
 
 ### Deploy and Recycle Nginx
@@ -55,5 +57,9 @@ Note that after updating nginx, the service will automatically start with the de
 For building see [ldtstore-homepage](https://github.com/stackinspector/ldtstore-homepage/).
 
 ```bash
-# [built]/legacy/index.html -> [remote]/server/guide-page
+# first update
+cd /server
+mkdir pages
+# [built]/guide-page -> [remote]/server/pages
+# [built]/guide-page-intl -> [remote]/server/pages
 ```
