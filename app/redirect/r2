@@ -69,10 +69,7 @@ traffic-monitor github.com/zhongyang219/TrafficMonitor/
 
 cpuz www.cpuid.com/softwares/cpu-z.html
 cinebench www.maxon.net/zh/cinebench
-cinebench-d-r115 http.maxon.net/pub/benchmarks/CINEBENCH_11.529.zip
-cinebench-d-r15 http.maxon.net/pub/benchmarks/CINEBENCH_R15.zip
-cinebench-d-r20 http.maxon.net/pub/cinebench/CinebenchR20.zip
-cinebench-d-r23 http.maxon.net/pub/cinebench/CinebenchR23.zip
+cinebench-d-r23 installer.maxon.net/cinebench/CinebenchR23.zip
 fritz-chess www.jens-hartmann.at/Fritzmarks/
 superpi http://www.superpi.net
 wprime http://www.wprime.net
@@ -162,7 +159,7 @@ passmark-keytest www.passmark.com/products/keytest/index.php
 chipgenius www.mydigit.cn/forum.php?mod=viewthread&tid=263544
 geekuninstaller geekuninstaller.com
 windbg docs.microsoft.com/zh-cn/windows-hardware/drivers/debugger/debugger-download-tools
-windbg-msstore www.microsoft.com/store/p/windbg/9pgjgd53tn86
+windbg-msstore apps.microsoft.com/detail/9pgjgd53tn86
 everything www.voidtools.com/zh-cn/
 windirstat windirstat.net
 wiztree www.diskanalyzer.com
@@ -170,6 +167,8 @@ spacesniffer http://www.uderzo.it/main_products/space_sniffer/
 desktopok www.softwareok.com/?Download=DesktopOK
 ccleaner www.ccleaner.com
 7zip 7-zip.org
+nanazip github.com/M2Team/NanaZip
+nanazip-msstore apps.microsoft.com/detail/9n8g7tscl18r
 bandizip www.bandisoft.com/bandizip/
 bandizip-dl www.bandisoft.com/bandizip/dl/
 bandizip-v6 www.bandisoft.com/bandizip/old/6/
@@ -184,14 +183,14 @@ speedtest-cn www.speedtest.cn
 powertoys docs.microsoft.com/zh-cn/windows/powertoys/
 autoruns docs.microsoft.com/en-us/sysinternals/downloads/autoruns
 eartrumpet eartrumpet.app
-eartrumpet-msstore www.microsoft.com/zh-cn/p/eartrumpet/9nblggh516xp
+eartrumpet-msstore apps.microsoft.com/detail/9nblggh516xp
 snipaste zh.snipaste.com
-snipaste-msstore www.microsoft.com/zh-cn/p/snipaste/9p1wxpkb68kx
+snipaste-msstore apps.microsoft.com/detail/9p1wxpkb68kx
 ditto ditto-cp.sourceforge.io
-ditto-msstore www.microsoft.com/en-us/p/ditto-clipboard/9nblggh3zbjq
+ditto-msstore apps.microsoft.com/detail/9nblggh3zbjq
 utools www.u.tools
 winaero-tweaker winaerotweaker.com
-quicklook-msstore www.microsoft.com/en-us/p/quicklook/9nv4bs3l1h4s
+quicklook-msstore apps.microsoft.com/detail/9nv4bs3l1h4s
 revo-uninst www.revouninstaller.com
 uninstall-tool crystalidea.com/uninstall-tool
 landrop landrop.app
@@ -200,6 +199,20 @@ autosizer http://www.southbaypc.com/AutoSizer/
 uninst-adobe-cc helpx.adobe.com/cn/creative-cloud/help/uninstall-creative-cloud-desktop-app.html
 lenovo-winupdate iknow.lenovo.com.cn/detail/dc_178562.html
 fancontrol github.com/Rem0o/FanControl.Releases
+
+ventoy-d-bfsu-windows mirrors.bfsu.edu.cn/github-release/ventoy/Ventoy/Ventoy%201.0.97%20release/ventoy-1.0.97-windows.zip
+ventoy-d-bfsu-linux mirrors.bfsu.edu.cn/github-release/ventoy/Ventoy/Ventoy%201.0.97%20release/ventoy-1.0.97-linux.tar.gz
+ventoy-d-bfsu-livecd mirrors.bfsu.edu.cn/github-release/ventoy/Ventoy/Ventoy%201.0.97%20release/ventoy-1.0.97-livecd.iso
+powertoys-d-bfsu-x64-user mirrors.bfsu.edu.cn/github-release/microsoft/PowerToys/Release%20v0.80.1/PowerToysUserSetup-0.80.1-x64.exe
+powertoys-d-bfsu-x64-system mirrors.bfsu.edu.cn/github-release/microsoft/PowerToys/Release%20v0.80.1/PowerToysSetup-0.80.1-x64.exe
+powertoys-d-bfsu-arm64-user mirrors.bfsu.edu.cn/github-release/microsoft/PowerToys/Release%20v0.80.1/PowerToysUserSetup-0.80.1-arm64.exe
+powertoys-d-bfsu-arm64-system mirrors.bfsu.edu.cn/github-release/microsoft/PowerToys/Release%20v0.80.1/PowerToysSetup-0.80.1-arm64.exe
+nanazip-d-bfsu mirrors.bfsu.edu.cn/github-release/M2Team/NanaZip/NanaZip%202.0%20Update%201%20%282.0.450.0%29/40174MouriNaruto.NanaZip_2.0.450.0_gnj4mf6z9tkrc.msixbundle
+cdm-d-bfsu mirrors.bfsu.edu.cn/osdn/crystaldiskmark/77936/CrystalDiskMark8_0_4c.exe
+cdm-d-bfsu-shizuku mirrors.bfsu.edu.cn/osdn/crystaldiskmark/77936/CrystalDiskMark8_0_4cShizuku.exe
+cdi-d-bfsu mirrors.bfsu.edu.cn/osdn/crystaldiskinfo/78992/CrystalDiskInfo9_1_1.exe
+cdi-d-bfsu-shizuku mirrors.bfsu.edu.cn/osdn/crystaldiskinfo/78992/CrystalDiskInfo9_1_1Shizuku.exe
+cdi-d-bfsu-kureikei mirrors.bfsu.edu.cn/osdn/crystaldiskinfo/78992/CrystalDiskInfo9_1_1KureiKei.exe
 
 guide-xtu-1 www.bilibili.com/video/BV1Sp4y1e7mr
 guide-amd-ryzen-master-1 www.bilibili.com/video/BV1bs411E79U
