@@ -208,11 +208,11 @@ powertoys-d-bfsu-x64-system mirrors.bfsu.edu.cn/github-release/microsoft/PowerTo
 powertoys-d-bfsu-arm64-user mirrors.bfsu.edu.cn/github-release/microsoft/PowerToys/Release%20v0.80.1/PowerToysUserSetup-0.80.1-arm64.exe
 powertoys-d-bfsu-arm64-system mirrors.bfsu.edu.cn/github-release/microsoft/PowerToys/Release%20v0.80.1/PowerToysSetup-0.80.1-arm64.exe
 nanazip-d-bfsu mirrors.bfsu.edu.cn/github-release/M2Team/NanaZip/NanaZip%202.0%20Update%201%20%282.0.450.0%29/40174MouriNaruto.NanaZip_2.0.450.0_gnj4mf6z9tkrc.msixbundle
-cdm-d-bfsu mirrors.bfsu.edu.cn/osdn/crystaldiskmark/77936/CrystalDiskMark8_0_4c.exe
-cdm-d-bfsu-shizuku mirrors.bfsu.edu.cn/osdn/crystaldiskmark/77936/CrystalDiskMark8_0_4cShizuku.exe
-cdi-d-bfsu mirrors.bfsu.edu.cn/osdn/crystaldiskinfo/78992/CrystalDiskInfo9_1_1.exe
-cdi-d-bfsu-shizuku mirrors.bfsu.edu.cn/osdn/crystaldiskinfo/78992/CrystalDiskInfo9_1_1Shizuku.exe
-cdi-d-bfsu-kureikei mirrors.bfsu.edu.cn/osdn/crystaldiskinfo/78992/CrystalDiskInfo9_1_1KureiKei.exe
+cdm-d-bfsu mirrors.bfsu.edu.cn/osdn/crystaldiskmark/77936/CrystalDiskMark8_0_4c.zip
+cdm-d-bfsu-shizuku mirrors.bfsu.edu.cn/osdn/crystaldiskmark/77936/CrystalDiskMark8_0_4cShizuku.zip
+cdi-d-bfsu mirrors.bfsu.edu.cn/osdn/crystaldiskinfo/78992/CrystalDiskInfo9_1_1.zip
+cdi-d-bfsu-shizuku mirrors.bfsu.edu.cn/osdn/crystaldiskinfo/78992/CrystalDiskInfo9_1_1Shizuku.zip
+cdi-d-bfsu-kureikei mirrors.bfsu.edu.cn/osdn/crystaldiskinfo/78992/CrystalDiskInfo9_1_1KureiKei.zip
 
 guide-xtu-1 www.bilibili.com/video/BV1Sp4y1e7mr
 guide-amd-ryzen-master-1 www.bilibili.com/video/BV1bs411E79U
