@@ -45,7 +45,7 @@ drv-amd www.amd.com/zh-hans/support
 drv-nvidia-old www.nvidia.cn/Download/index.aspx?lang=cn
 drv-nvidia-new www.nvidia.cn/geforce/drivers/
 drv-asus www.asus.com.cn/support/Download-Center/
-drv-msi cn.msi.com/support/download
+drv-msi www.msi.com/support/download
 drv-asrock www.asrockchina.com.cn/support/index.cn.asp
 drv-maxsun http://www.maxsun.com.cn/down/mb/intel/
 drv-biostar http://www.biostar.com.cn/app/en-us/support/download.php
@@ -131,7 +131,7 @@ wmct-10 www.microsoft.com/zh-cn/software-download/windows10
 wmct-11 www.microsoft.com/zh-cn/software-download/windows11
 cmwtat cmwtat.cloudmoe.com
 vcrtpack www.techpowerup.com/download/visual-c-redistributable-runtime-package-all-in-one/
-vcrtpack-ya www.mefcl.com/yxk-dreamcast/249
+vcrtpack-ya www.mefcl.com/yxk-dreamcast.html
 dx-repair blog.csdn.net/vbcom/article/details/6962388
 intel-dsa-download www.intel.cn/content/www/cn/zh/support/detect.html
 intel-dsa-access www.intel.cn/content/www/cn/zh/support/intel-driver-support-assistant.html
