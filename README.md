@@ -12,7 +12,7 @@ For **images** on the pages, see [ldtstore-assert](https://github.com/stackinspe
 
 For the generic http **redirect** service used on `r.ldt.pc.wiki`, see [http-redirector](https://github.com/stackinspector/http-redirector/)
 
-## Build Docker images for redirect service
+## Build Docker Images for Redirect Service
 
 Prepare a linux VM with docker installed locally for building images. Login as `root`.
 
@@ -25,7 +25,30 @@ docker build -t path/to/redirect:v0.8.1 .
 docker push path/to/redirect:v0.8.1
 ```
 
-## Build, Deploy and Recycle for Short/Reserved domains
+## Build, Deploy and Recycle for Main Domains
+
+```
+[assert]/image -> [static]/s0-ldt/image
+[built]/code -> [static]/s0-ldt
+[built]/page-boot -> [static]/s0-ldt
+[built]/ldt/error.html -> [static]/s0-ldt
+[built]/ldt/robots.txt -> [static]/s0-ldt
+[built]/ldt -> [static]
+[built]/tool -> [static]
+[tool] -> [static]
+
+[static] -> [remote]/server
+[repo]/app/redirect -> [remote]/server/app
+[hr-release]/hr -> [remote]/server/app/redirect
+[repo]/nginx-main -> [remote]/server/nginx
+
+tmux new -s hr
+cd /server/app/redirect
+./hr -p 38010 -c "r,r;r2,r2;mirror,mirror;mirror-cn,mirror;mirror-os,mirror" -l log
+tmux attach -t hr
+```
+
+## Build, Deploy and Recycle for Short/Reserved Domains
 
 Ensure that `/server/certs/ldtstore-domains` contains `key.pem` and `fullchain.pem` and dhparam file is on `/server/certs/dh4096.pem`.
 
