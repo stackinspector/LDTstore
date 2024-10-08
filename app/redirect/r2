@@ -131,6 +131,9 @@ ventoy www.ventoy.net
 wmct-10 www.microsoft.com/zh-cn/software-download/windows10
 wmct-11 www.microsoft.com/zh-cn/software-download/windows11
 cmwtat cmwtat.cloudmoe.com
+vcrt-latest-x64 aka.ms/vs/17/release/vc_redist.x64.exe
+vcrt-latest-x86 aka.ms/vs/17/release/vc_redist.x86.exe
+vcrt-latest-arm64 aka.ms/vs/17/release/vc_redist.arm64.exe
 vcrtpack www.techpowerup.com/download/visual-c-redistributable-runtime-package-all-in-one/
 vcrtpack-ya www.mefcl.com/yxk-dreamcast.html
 dx-repair blog.csdn.net/vbcom/article/details/6962388
