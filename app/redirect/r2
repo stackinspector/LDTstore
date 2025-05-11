@@ -1,4 +1,4 @@
-tbtool http://www.tbtool.cn
+tbtool www.tbtool.cn
 kbtool http://www.kbtool.cn
 kbtool-d-od http://wp.smxdiy.top/%E5%8D%A1%E7%A1%AC%E5%B7%A5%E5%85%B7%E7%AE%B1(%E5%AF%86%E7%A0%81%EF%BC%9A1234)/kaying_tools_V2.97_setup.zip
 dismxx www.chuyu.me
@@ -24,7 +24,6 @@ rank-kkj rank.kkj.cn/Computer73.shtml
 rank-zol cpu.zol.com.cn/soc/
 rank-socpk www.socpk.com
 rank-p-pccomp zhuanlan.zhihu.com/p/127042304
-rank-p-supergsg-v1 http://blog.sina.com.cn/s/blog_1696a5af50102xiju.html
 rank-p-supergsg-v2 bbs.kafan.cn/thread-2091905-1-1.html
 rank-fcp www.fcpowerup.com/fcpmark/
 rank-p-mem zhuanlan.zhihu.com/p/163842976
@@ -47,16 +46,15 @@ drv-nvidia-new www.nvidia.cn/geforce/drivers/
 drv-asus www.asus.com.cn/support/Download-Center/
 drv-msi www.msi.com/support/download
 drv-asrock www.asrockchina.com.cn/support/index.cn.asp
-drv-maxsun http://www.maxsun.com.cn/down/mb/intel/
-drv-biostar http://www.biostar.com.cn/app/en-us/support/download.php
+drv-maxsun www.maxsun.com.cn/down/mb/intel/
+drv-biostar www.biostar.com.tw/app/tw/support/download.php
 drv-gigabyte www.gigabyte.cn/Support
-drv-colorful www.colorful.cn/server.aspx?classid=2825
-drv-galaxy http://www.szgalaxy.com/__ZH_GB__/Product5/ProductIndex
-drv-soyo http://www.soyocn.net/down/
-drv-shengqi http://www.shengqipc.cn/d0.html
+drv-colorful www.colorful.cn/home/download
+drv-galaxy www.szgalaxy.com/service/driversystem
+drv-soyo www.soyocn.net/down/zbdrv/INTEL/
+drv-shengqi www.shengqipc.cn/d0.html
 drv-onda http://www.onda.cn/Services.aspx
 
-tbinfo http://www.tbtool.cn
 aida64 www.aida64.com
 hwinfo www.hwinfo.com
 logviewer www.hwinfo.com/forum/threads/logviewer-for-hwinfo-is-available.802/
@@ -71,8 +69,7 @@ cpuz www.cpuid.com/softwares/cpu-z.html
 cinebench www.maxon.net/zh/cinebench
 cinebench-d-r23 installer.maxon.net/cinebench/CinebenchR23.zip
 fritz-chess www.jens-hartmann.at/Fritzmarks/
-superpi http://www.superpi.net
-wprime http://www.wprime.net
+superpi-tpu www.techpowerup.com/download/super-pi/
 baiyan epcdiy.org
 blender-test opendata.blender.org
 intel-xtu www.intel.com/content/www/us/en/download/17881/intel-extreme-tuning-utility-intel-xtu.html
