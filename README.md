@@ -2,7 +2,7 @@
 
 ## NOTICE
 
-The current role of this repository is **only** the configuration of **dynamic services and short/reserved domains**.
+The current role of this repository is **only** the configuration of **nginx (for both main and short/reserved domains) and dynamic services**.
 
 The three directories `build` (for old pages and their build system before November 2021), `nginx` (for previous nginx configuration of the main site) and `wwwroot` are reserved **for historical reasons** only.
 
