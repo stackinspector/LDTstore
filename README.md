@@ -31,13 +31,13 @@ docker push path/to/redirect:v0.8.1
 [assert]/image -> [static]/s0-ldt/image
 [built]/code -> [static]/s0-ldt
 [built]/page-boot -> [static]/s0-ldt
-[built]/ldt/error.html -> [static]/s0-ldt
-[built]/ldt/robots.txt -> [static]/s0-ldt
 [built]/ldt -> [static]
 [built]/tool -> [static]
+[ldtstore-homepage]/static/error.html -> [static]/ldt,tool,s0-ldt
+[ldtstore-homepage]/static/robots.txt -> [static]/ldt,tool,s0-ldt
 [tool] -> [static]
 
-[static] -> [remote]/server
+[static] -> [remote]/
 [repo]/app/redirect -> [remote]/server/app
 [hr-release]/hr -> [remote]/server/app/redirect
 [repo]/nginx-main -> [remote]/server/nginx
@@ -83,6 +83,6 @@ For building see [ldtstore-homepage](https://github.com/stackinspector/ldtstore-
 # first update
 cd /server
 mkdir pages
-# [built]/guide-page -> [remote]/server/pages
-# [built]/guide-page-intl -> [remote]/server/pages
+# [built]/guide-page -> [remote]/static
+# [built]/guide-page-intl -> [remote]/static
 ```
