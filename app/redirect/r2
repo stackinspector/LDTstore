@@ -201,19 +201,9 @@ uninst-adobe-cc helpx.adobe.com/cn/creative-cloud/help/uninstall-creative-cloud-
 lenovo-winupdate iknow.lenovo.com.cn/detail/dc_178562.html
 fancontrol github.com/Rem0o/FanControl.Releases
 
-ventoy-d-bfsu-windows mirrors.bfsu.edu.cn/github-release/ventoy/Ventoy/Ventoy%201.0.97%20release/ventoy-1.0.97-windows.zip
-ventoy-d-bfsu-linux mirrors.bfsu.edu.cn/github-release/ventoy/Ventoy/Ventoy%201.0.97%20release/ventoy-1.0.97-linux.tar.gz
-ventoy-d-bfsu-livecd mirrors.bfsu.edu.cn/github-release/ventoy/Ventoy/Ventoy%201.0.97%20release/ventoy-1.0.97-livecd.iso
-powertoys-d-bfsu-x64-user mirrors.bfsu.edu.cn/github-release/microsoft/PowerToys/Release%20v0.80.1/PowerToysUserSetup-0.80.1-x64.exe
-powertoys-d-bfsu-x64-system mirrors.bfsu.edu.cn/github-release/microsoft/PowerToys/Release%20v0.80.1/PowerToysSetup-0.80.1-x64.exe
-powertoys-d-bfsu-arm64-user mirrors.bfsu.edu.cn/github-release/microsoft/PowerToys/Release%20v0.80.1/PowerToysUserSetup-0.80.1-arm64.exe
-powertoys-d-bfsu-arm64-system mirrors.bfsu.edu.cn/github-release/microsoft/PowerToys/Release%20v0.80.1/PowerToysSetup-0.80.1-arm64.exe
-nanazip-d-bfsu mirrors.bfsu.edu.cn/github-release/M2Team/NanaZip/NanaZip%202.0%20Update%201%20%282.0.450.0%29/40174MouriNaruto.NanaZip_2.0.450.0_gnj4mf6z9tkrc.msixbundle
-cdm-d-bfsu mirrors.bfsu.edu.cn/osdn/crystaldiskmark/77936/CrystalDiskMark8_0_4c.zip
-cdm-d-bfsu-shizuku mirrors.bfsu.edu.cn/osdn/crystaldiskmark/77936/CrystalDiskMark8_0_4cShizuku.zip
-cdi-d-bfsu mirrors.bfsu.edu.cn/osdn/crystaldiskinfo/78992/CrystalDiskInfo9_1_1.zip
-cdi-d-bfsu-shizuku mirrors.bfsu.edu.cn/osdn/crystaldiskinfo/78992/CrystalDiskInfo9_1_1Shizuku.zip
-cdi-d-bfsu-kureikei mirrors.bfsu.edu.cn/osdn/crystaldiskinfo/78992/CrystalDiskInfo9_1_1KureiKei.zip
+ventoy-bfsu mirrors.bfsu.edu.cn/github-release/ventoy/Ventoy/LatestRelease/
+powertoys-bfsu mirrors.bfsu.edu.cn/github-release/microsoft/PowerToys/LatestRelease/
+nanazip-bfsu mirrors.bfsu.edu.cn/github-release/M2Team/NanaZip/
 
 guide-xtu-1 www.bilibili.com/video/BV1Sp4y1e7mr
 guide-amd-ryzen-master-1 www.bilibili.com/video/BV1bs411E79U
