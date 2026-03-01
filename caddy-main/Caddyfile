@@ -1,0 +1,152 @@
+# required:
+# https://github.com/mholt/caddy-ratelimit
+# https://github.com/ueffel/caddy-brotli
+# https://github.com/caddy-dns/edgeone
+# https://github.com/mnixry/caddy-edgeone-ip
+
+(_tls_modern) {
+	tls {
+		# https://ssl-config.mozilla.org/#server=caddy&version=2.8.4&config=modern&guideline=5.7
+		curves x25519 secp256r1 secp384r1
+		protocols tls1.3
+
+		# for mainland server
+		resolvers 119.29.29.29
+	}
+}
+
+(_compress) {
+	encode gzip br zstd
+}
+
+(_access_log) {
+	log {
+		output file /server/caddy/logs/access {
+			roll_disabled
+		}
+	}
+}
+
+(_basic) {
+	import _tls_modern
+	import _compress
+	import _access_log
+}
+
+(_hsts) {
+	header Strict-Transport-Security "max-age=63072000"
+}
+
+(_allow_cross_domain) {
+	header Access-Control-Allow-Origin "*"
+}
+
+(_paths) {
+	redir /favicon.ico https://s0.ldt.pc.wiki/image/shared/laodi-64px.png 302
+}
+
+(_rate_limit_static) {
+	rate_limit {
+		key {http.request.remote.host}
+		max_events 100
+		window 1s
+	}
+}
+
+(_rate_limit_redirect) {
+	rate_limit {
+		key {http.request.remote.host}
+		max_events 100
+		window 1s
+	}
+}
+
+(static) {
+	import _basic
+	import _hsts
+	import _rate_limit_static
+	import _paths
+
+	file_server
+
+	handle_errors {
+		rewrite * /error.html
+		file_server
+	}
+}
+
+(redirect) {
+	import _basic
+	import _hsts
+	import _rate_limit_redirect
+	import _paths
+
+	root /server/empty-root
+}
+
+{
+	admin off
+	persist_config off
+
+	log {
+		output file /server/caddy/logs/error {
+			roll_disabled
+		}
+		level INFO
+	}
+
+	email ldtstore@126.com
+
+	acme_dns edgeone {
+		secret_id {env.TC_SECRET_ID}
+		secret_key {env.TC_SECRET_KEY}
+	}
+
+	auto_https disable_redirects
+
+	servers :54300 {
+		protocols h1 h2
+
+		# deny requests not from CDN
+		trusted_proxies edgeone {env.TC_SECRET_ID} {env.TC_SECRET_KEY} {
+			cache_ttl 1h
+			cache_size 500
+			timeout 5s
+		}
+
+		# deny requests with no/wrong server_name (by default) & sni
+		strict_sni_host on
+	}
+}
+
+s0.ldt.pc.wiki:54300 {
+	import static
+	import _allow_cross_domain
+
+	root /static/s0-ldt
+}
+
+ldt.pc.wiki:54300 {
+	import static
+
+	root /static/ldt
+}
+
+tool.pc.wiki:54300 {
+	import static
+
+	root /static/tool
+}
+
+d1.tool.pc.wiki:54300 {
+	import static
+
+	root /static/d1-tool
+}
+
+r.ldt.pc.wiki:54300 {
+	import redirect
+
+	reverse_proxy http://127.0.0.1:38010
+	# X-Forwarded-For added by default
+}
