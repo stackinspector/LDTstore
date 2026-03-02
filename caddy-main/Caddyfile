@@ -10,8 +10,10 @@
 		curves x25519 secp256r1 secp384r1
 		protocols tls1.3
 
-		# for mainland server
-		resolvers 119.29.29.29
+		# for EdgeOne
+		propagation_timeout 10m
+		propagation_delay 5m
+		resolvers ns1.qeodns.com ns2.qeodns.com
 	}
 }
 
@@ -85,8 +87,7 @@
 }
 
 {
-	admin off
-	persist_config off
+	admin unix//server/caddy/admin.sock
 
 	log {
 		output file /server/caddy/logs/error {
@@ -96,6 +97,8 @@
 	}
 
 	email ldtstore@126.com
+
+	acme_ca https://acme.zerossl.com/v2/DV90
 
 	acme_dns edgeone {
 		secret_id {env.TC_SECRET_ID}
@@ -108,11 +111,12 @@
 		protocols h1 h2
 
 		# deny requests not from CDN
-		trusted_proxies edgeone {env.TC_SECRET_ID} {env.TC_SECRET_KEY} {
-			cache_ttl 1h
-			cache_size 500
-			timeout 5s
-		}
+		# the module is buggy so skip temporary
+		# trusted_proxies edgeone {env.TC_SECRET_ID} {env.TC_SECRET_KEY} {
+		# 	cache_ttl 1h
+		# 	cache_size 500
+		# 	timeout 5s
+		# }
 
 		# deny requests with no/wrong server_name (by default) & sni
 		strict_sni_host on
