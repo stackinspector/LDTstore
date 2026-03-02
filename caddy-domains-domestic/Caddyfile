@@ -1,0 +1,160 @@
+# required:
+# https://github.com/mholt/caddy-ratelimit
+# https://github.com/ueffel/caddy-brotli
+# https://github.com/caddy-dns/tencentcloud
+
+(_tls_intermediate) {
+	tls {
+		# https://ssl-config.mozilla.org/#server=caddy&version=2.8.4&config=intermediate&guideline=5.7
+		ciphers TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256 TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384 TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256 TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256
+		curves x25519 secp256r1 secp384r1
+		protocols tls1.2 tls1.3
+
+		# for DNSPod
+		resolvers shorts.dnspod.net room.dnspod.net
+	}
+}
+
+(_compress) {
+	encode gzip br zstd
+}
+
+(_access_log) {
+	log {
+		output file /server/caddy/logs/access {
+			roll_disabled
+		}
+	}
+}
+
+(_basic) {
+	import _tls_intermediate
+	import _compress
+	import _access_log
+}
+
+(_hsts) {
+	header Strict-Transport-Security "max-age=63072000"
+}
+
+(_paths) {
+	# /robots.txt 404
+	# /sitemap.xml 404
+	redir /favicon.ico https://s0.ldt.pc.wiki/image/shared/laodi-64px.png 302
+}
+
+(_rate_limit_redirect) {
+	rate_limit {
+		key {http.request.remote.host}
+		max_events 100
+		window 1s
+	}
+}
+
+(_rate_limit_http) {
+	rate_limit {
+		key {http.request.remote.host}
+		max_events 20
+		window 1s
+	}
+}
+
+(_rate_limit_page) {
+	rate_limit {
+		key {http.request.remote.host}
+		max_events 20
+		window 1s
+	}
+}
+
+(http) {
+	import _access_log
+	import _rate_limit_http
+
+	redir https:{host}{uri} 301
+}
+
+(page) {
+	import _basic
+	import _hsts
+	import _rate_limit_page
+	import _paths
+
+	file_server
+}
+
+(redirect_http) {
+	import _access_log
+	import _rate_limit_redirect
+	import _paths
+}
+
+(redirect_https) {
+	import _basic
+	import _hsts
+	import _rate_limit_redirect
+	import _paths
+}
+
+{
+	admin unix//server/caddy/admin.sock
+
+	log {
+		output file /server/caddy/logs/error {
+			roll_disabled
+		}
+		level INFO
+	}
+
+	email ldtstore@126.com
+
+	acme_ca https://acme.zerossl.com/v2/DV90
+
+	acme_dns tencentcloud {
+		secret_id {env.TC_SECRET_ID}
+		secret_key {env.TC_SECRET_KEY}
+	}
+
+	auto_https disable_redirects
+
+	servers :80 {
+		protocols h1
+
+		# deny requests with no/wrong server_name (by default) & sni
+		strict_sni_host on
+	}
+
+	servers :443 {
+		protocols h1 h2
+
+		# deny requests with no/wrong server_name (by default) & sni
+		strict_sni_host on
+	}
+}
+
+ldtstore.com.cn:80 {
+	import http
+}
+
+ldtstore.com.cn:443 {
+	import page
+
+	root /static/guide-page
+
+	@not_root {
+		not path /
+	}
+	redir @not_root / 301
+}
+
+r.ldtstore.com.cn:80 {
+	import redirect_http
+
+	redir /{path} https://r.ldt.pc.wiki/{path} 301
+}
+
+r.ldtstore.com.cn:443 {
+	import redirect_https
+
+	redir /{path} https://r.ldt.pc.wiki/{path} 301
+}
