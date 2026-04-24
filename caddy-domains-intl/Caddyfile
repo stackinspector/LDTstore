@@ -1,0 +1,273 @@
+# required:
+# https://github.com/mholt/caddy-ratelimit
+# https://github.com/ueffel/caddy-brotli
+# https://github.com/caddy-dns/tencentcloud
+
+(_tls_intermediate) {
+	tls {
+		protocols tls1.2 tls1.3
+
+		# for DNSPod
+		resolvers shorts.dnspod.net room.dnspod.net
+	}
+}
+
+(_compress) {
+	encode gzip br zstd
+}
+
+(_access_log) {
+	log {
+		output file /server/caddy/logs/access {
+			roll_disabled
+		}
+	}
+}
+
+(_basic) {
+	import _tls_intermediate
+	import _compress
+	import _access_log
+}
+
+(_hsts) {
+	header Strict-Transport-Security "max-age=63072000"
+}
+
+(_paths) {
+	# /robots.txt 404
+	# /sitemap.xml 404
+	redir /favicon.ico https://s0.ldt.pc.wiki/image/shared/laodi-64px.png 302
+}
+
+(_rate_limit_redirect) {
+	rate_limit {
+		key {http.request.remote.host}
+		max_events 100
+		window 1s
+	}
+}
+
+(_rate_limit_http) {
+	rate_limit {
+		key {http.request.remote.host}
+		max_events 20
+		window 1s
+	}
+}
+
+(_rate_limit_page) {
+	rate_limit {
+		key {http.request.remote.host}
+		max_events 20
+		window 1s
+	}
+}
+
+(http) {
+	import _access_log
+	import _rate_limit_http
+
+	redir https://{host}{uri} 301
+}
+
+(page) {
+	import _basic
+	import _hsts
+	import _rate_limit_page
+	import _paths
+
+	file_server
+}
+
+(redirect_http) {
+	import _access_log
+	import _rate_limit_redirect
+}
+
+(redirect_https) {
+	import _basic
+	import _hsts
+	import _rate_limit_redirect
+}
+
+{
+	admin unix//server/caddy/admin.sock
+
+	log {
+		output file /server/caddy/logs/error {
+			roll_disabled
+		}
+		level INFO
+	}
+
+	email ldtstore@126.com
+
+	acme_ca https://acme.zerossl.com/v2/DV90
+
+	acme_dns tencentcloud {
+		secret_id {env.TC_SECRET_ID}
+		secret_key {env.TC_SECRET_KEY}
+	}
+
+	auto_https disable_redirects
+
+	servers :80 {
+		protocols h1
+
+		# deny requests with no/wrong server_name (by default) & sni
+		strict_sni_host on
+	}
+
+	servers :443 {
+		protocols h1 h2
+
+		# deny requests with no/wrong server_name (by default) & sni
+		strict_sni_host on
+	}
+}
+
+lab.ldt.tools:80 {
+	import http
+}
+
+lab.ldt.tools:443 {
+	import page
+
+	root /static/ldtools-lab
+}
+
+ldtstore.net:80 {
+	import http
+}
+
+ldtstore.net:443 {
+	import page
+
+	root /static/guide-page-intl
+
+	@not_root {
+		not path /
+	}
+	redir @not_root / 301
+}
+
+ldt.tools:80 {
+	import redirect_http
+
+	redir https://r.ldt.pc.wiki/r/fw-ldt-tools 302
+}
+
+ldt.tools:443 {
+	import redirect_https
+
+	redir https://r.ldt.pc.wiki/r/fw-ldt-tools 302
+}
+
+p.ldt.tools:80 {
+	import redirect_http
+
+	redir https://r.ldt.pc.wiki/r/fw-ldt-tools-plain 302
+}
+
+p.ldt.tools:443 {
+	import redirect_https
+
+	redir https://r.ldt.pc.wiki/r/fw-ldt-tools-plain 302
+}
+
+d.ldt.tools:80 {
+	import redirect_http
+
+	redir https://r.ldt.pc.wiki/mirror{path} 302
+}
+
+d.ldt.tools:443 {
+	import redirect_https
+
+	redir https://r.ldt.pc.wiki/mirror{path} 302
+}
+
+ldtools.ltd:80 {
+	import redirect_http
+
+	redir https://r.ldt.pc.wiki/r/fw-ldtools 302
+}
+
+ldtools.ltd:443 {
+	import redirect_https
+
+	redir https://r.ldt.pc.wiki/r/fw-ldtools 302
+}
+
+ldtool.ltd:80 {
+	import redirect_http
+
+	redir https://r.ldt.pc.wiki/r/fw-ldtool 302
+}
+
+ldtool.ltd:443 {
+	import redirect_https
+
+	redir https://r.ldt.pc.wiki/r/fw-ldtool 302
+}
+
+ldtstore.cn:80 {
+	import redirect_http
+
+	redir https://r.ldt.pc.wiki/r/fw-ldt-cn 302
+}
+
+ldtstore.cn:443 {
+	import redirect_https
+
+	redir https://r.ldt.pc.wiki/r/fw-ldt-cn 302
+}
+
+laoditeachtips.com:80 {
+	import redirect_http
+
+	redir https://r.ldt.pc.wiki/r/fw-ltt-com 302
+}
+
+laoditeachtips.com:443 {
+	import redirect_https
+
+	redir https://r.ldt.pc.wiki/r/fw-ltt-com 302
+}
+
+laoditeachtips.cn:80 {
+	import redirect_http
+
+	redir https://r.ldt.pc.wiki/r/fw-ltt-cn 302
+}
+
+laoditeachtips.cn:443 {
+	import redirect_https
+
+	redir https://r.ldt.pc.wiki/r/fw-ltt-cn 302
+}
+
+brotherno.one:80 {
+	import redirect_http
+
+	redir https://r.ldt.pc.wiki/r/fw-brono1 302
+}
+
+brotherno.one:443 {
+	import redirect_https
+
+	redir https://r.ldt.pc.wiki/r/fw-brono1 302
+}
+
+pcdiy.icu:80 {
+	import redirect_http
+
+	redir https://r.ldt.pc.wiki/r/fw-icu-newtopic 302
+}
+
+pcdiy.icu:443 {
+	import redirect_https
+
+	redir https://r.ldt.pc.wiki/r/fw-icu-newtopic 302
+}
