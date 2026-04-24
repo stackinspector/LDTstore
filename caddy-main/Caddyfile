@@ -2,12 +2,9 @@
 # https://github.com/mholt/caddy-ratelimit
 # https://github.com/ueffel/caddy-brotli
 # https://github.com/caddy-dns/edgeone
-# https://github.com/mnixry/caddy-edgeone-ip
 
 (_tls_modern) {
 	tls {
-		# https://ssl-config.mozilla.org/#server=caddy&version=2.8.4&config=modern&guideline=5.7
-		curves x25519 secp256r1 secp384r1
 		protocols tls1.3
 
 		# for EdgeOne
@@ -109,14 +106,6 @@
 
 	servers :54300 {
 		protocols h1 h2
-
-		# deny requests not from CDN
-		# the module is buggy so skip temporary
-		# trusted_proxies edgeone {env.TC_SECRET_ID} {env.TC_SECRET_KEY} {
-		# 	cache_ttl 1h
-		# 	cache_size 500
-		# 	timeout 5s
-		# }
 
 		# deny requests with no/wrong server_name (by default) & sni
 		strict_sni_host on
