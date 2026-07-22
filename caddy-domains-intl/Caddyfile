@@ -137,6 +137,16 @@ lab.ldt.tools:443 {
 	root /static/ldtools-lab
 }
 
+flip.pcdiy.icu:80 {
+	import http
+}
+
+flip.pcdiy.icu:443 {
+	import page
+
+	root /static/shakenc-flip-web
+}
+
 ldtstore.net:80 {
 	import http
 }
