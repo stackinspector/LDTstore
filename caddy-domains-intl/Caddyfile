@@ -147,6 +147,16 @@ flip.pcdiy.icu:443 {
 	root /static/shakenc-flip-web
 }
 
+music-stroop.pcdiy.icu:80 {
+	import http
+}
+
+music-stroop.pcdiy.icu:443 {
+	import page
+
+	root /static/music-stroop
+}
+
 ldtstore.net:80 {
 	import http
 }
