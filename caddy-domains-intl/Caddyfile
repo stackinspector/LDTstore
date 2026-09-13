@@ -165,6 +165,16 @@ music-stroop.pcdiy.icu:443 {
 	root /static/music-stroop
 }
 
+moving-on.pcdiy.icu:80 {
+	import http
+}
+
+moving-on.pcdiy.icu:443 {
+	import page_base
+
+	root /static/moving-on
+}
+
 ldtstore.net:80 {
 	import http
 }
