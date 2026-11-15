@@ -190,6 +190,21 @@ ldtstore.net:443 {
 	redir @not_root / 301
 }
 
+ldtstore.com:80 {
+	import http
+}
+
+ldtstore.com:443 {
+	import page
+
+	root /static/guide-page-com
+
+	@not_root {
+		not path /
+	}
+	redir @not_root / 301
+}
+
 ldt.tools:80 {
 	import redirect_http
 
